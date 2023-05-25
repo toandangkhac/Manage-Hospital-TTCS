@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BENHVIEN", "BENHVIEN\BENHVIEN.csproj", "{FD93665E-6092-4F19-A34C-75AFD985E27B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD93665E-6092-4F19-A34C-75AFD985E27B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD93665E-6092-4F19-A34C-75AFD985E27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD93665E-6092-4F19-A34C-75AFD985E27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD93665E-6092-4F19-A34C-75AFD985E27B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18AF1E42-C0BB-4367-BD56-BC48B78B3A0C}
+	EndGlobalSection
+EndGlobal

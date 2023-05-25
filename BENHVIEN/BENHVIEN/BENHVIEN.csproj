@@ -1,0 +1,208 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD93665E-6092-4F19-A34C-75AFD985E27B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BENHVIEN</RootNamespace>
+    <AssemblyName>BENHVIEN</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.XtraBars.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBacSi.Designer.cs">
+      <DependentUpon>FormBacSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBenhNhan.Designer.cs">
+      <DependentUpon>FormBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBenhNhanGiuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBenhNhanGiuong.Designer.cs">
+      <DependentUpon>FormBenhNhanGiuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChon\FormChonBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChon\FormChonBacSi.Designer.cs">
+      <DependentUpon>FormChonBacSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChon\FormChonBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChon\FormChonBenhNhan.Designer.cs">
+      <DependentUpon>FormChonBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChon\FormChonGiuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChon\FormChonGiuong.Designer.cs">
+      <DependentUpon>FormChonGiuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChon\FormChonNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChon\FormChonNhanVien.Designer.cs">
+      <DependentUpon>FormChonNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVattu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVattu.Designer.cs">
+      <DependentUpon>FormVattu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOSPITALDataSet.cs">
+      <DependentUpon>HOSPITALDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HOSPITALDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HOSPITALDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBacSi.resx">
+      <DependentUpon>FormBacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBenhNhan.resx">
+      <DependentUpon>FormBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBenhNhanGiuong.resx">
+      <DependentUpon>FormBenhNhanGiuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChon\FormChonBacSi.resx">
+      <DependentUpon>FormChonBacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChon\FormChonBenhNhan.resx">
+      <DependentUpon>FormChonBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChon\FormChonGiuong.resx">
+      <DependentUpon>FormChonGiuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChon\FormChonNhanVien.resx">
+      <DependentUpon>FormChonNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVattu.resx">
+      <DependentUpon>FormVattu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="HOSPITALDataSet.xsc">
+      <DependentUpon>HOSPITALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HOSPITALDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HOSPITALDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HOSPITALDataSet.xss">
+      <DependentUpon>HOSPITALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
