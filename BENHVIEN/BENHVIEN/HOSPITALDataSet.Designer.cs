@@ -54,6 +54,8 @@ namespace BENHVIEN {
         
         private THONGTINDataTable tableTHONGTIN;
         
+        private global::System.Data.DataRelation relationFK_NHANVIEN_CT_NV_KHUCHUATRI;
+        
         private global::System.Data.DataRelation relationFK_BACSI_NHANVIEN;
         
         private global::System.Data.DataRelation relationFK_CT_BACSI_CHUATRI_BENHNHAN_BACSI;
@@ -69,8 +71,6 @@ namespace BENHVIEN {
         private global::System.Data.DataRelation relationFK_MaCTBSCTBN_CT_HOADON;
         
         private global::System.Data.DataRelation relationFK_MaVT_CT_HOADON;
-        
-        private global::System.Data.DataRelation relationFK_CT_NV_KHUCHUATRI_YTA;
         
         private global::System.Data.DataRelation relationFK_SoKhu_CT_NV_KHUCHUATRI;
         
@@ -568,6 +568,7 @@ namespace BENHVIEN {
                     this.tableTHONGTIN.InitVars();
                 }
             }
+            this.relationFK_NHANVIEN_CT_NV_KHUCHUATRI = this.Relations["FK_NHANVIEN_CT_NV_KHUCHUATRI"];
             this.relationFK_BACSI_NHANVIEN = this.Relations["FK_BACSI_NHANVIEN"];
             this.relationFK_CT_BACSI_CHUATRI_BENHNHAN_BACSI = this.Relations["FK_CT_BACSI_CHUATRI_BENHNHAN_BACSI"];
             this.relationFK_MaBenhNhan_CT_BACSI_CHUATRI_BENHNHAN = this.Relations["FK_MaBenhNhan_CT_BACSI_CHUATRI_BENHNHAN"];
@@ -576,7 +577,6 @@ namespace BENHVIEN {
             this.relationFK_MaGiuong_CT_BENHNHAN_GIUONG = this.Relations["FK_MaGiuong_CT_BENHNHAN_GIUONG"];
             this.relationFK_MaCTBSCTBN_CT_HOADON = this.Relations["FK_MaCTBSCTBN_CT_HOADON"];
             this.relationFK_MaVT_CT_HOADON = this.Relations["FK_MaVT_CT_HOADON"];
-            this.relationFK_CT_NV_KHUCHUATRI_YTA = this.Relations["FK_CT_NV_KHUCHUATRI_YTA"];
             this.relationFK_SoKhu_CT_NV_KHUCHUATRI = this.Relations["FK_SoKhu_CT_NV_KHUCHUATRI"];
             this.relationFK_SoKhu_GIUONGBENH = this.Relations["FK_SoKhu_GIUONGBENH"];
             this.relationFK_KHUCHUATRI_YTA = this.Relations["FK_KHUCHUATRI_YTA"];
@@ -627,6 +627,18 @@ namespace BENHVIEN {
             base.Tables.Add(this.tableGIUONG);
             this.tableTHONGTIN = new THONGTINDataTable();
             base.Tables.Add(this.tableTHONGTIN);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_NHANVIEN_CT_NV_KHUCHUATRI", new global::System.Data.DataColumn[] {
+                        this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_NV_KHUCHUATRI.MaNVColumn});
+            this.tableCT_NV_KHUCHUATRI.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationFK_NHANVIEN_CT_NV_KHUCHUATRI = new global::System.Data.DataRelation("FK_NHANVIEN_CT_NV_KHUCHUATRI", new global::System.Data.DataColumn[] {
+                        this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_NV_KHUCHUATRI.MaNVColumn}, false);
+            this.Relations.Add(this.relationFK_NHANVIEN_CT_NV_KHUCHUATRI);
             this.relationFK_BACSI_NHANVIEN = new global::System.Data.DataRelation("FK_BACSI_NHANVIEN", new global::System.Data.DataColumn[] {
                         this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
                         this.tableBACSI.MaBacSiColumn}, false);
@@ -659,10 +671,6 @@ namespace BENHVIEN {
                         this.tableVATTU.MaVTColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_HOADON.MaVTColumn}, false);
             this.Relations.Add(this.relationFK_MaVT_CT_HOADON);
-            this.relationFK_CT_NV_KHUCHUATRI_YTA = new global::System.Data.DataRelation("FK_CT_NV_KHUCHUATRI_YTA", new global::System.Data.DataColumn[] {
-                        this.tableYTA.MaYTColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCT_NV_KHUCHUATRI.MaNVColumn}, false);
-            this.Relations.Add(this.relationFK_CT_NV_KHUCHUATRI_YTA);
             this.relationFK_SoKhu_CT_NV_KHUCHUATRI = new global::System.Data.DataRelation("FK_SoKhu_CT_NV_KHUCHUATRI", new global::System.Data.DataColumn[] {
                         this.tableKHUCHUATRI.SoKhuColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_NV_KHUCHUATRI.SoKhuColumn}, false);
@@ -2643,15 +2651,15 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CT_NV_KHUCHUATRIRow AddCT_NV_KHUCHUATRIRow(YTARow parentYTARowByFK_CT_NV_KHUCHUATRI_YTA, KHUCHUATRIRow parentKHUCHUATRIRowByFK_SoKhu_CT_NV_KHUCHUATRI, System.DateTime NgayBD, System.DateTime NgayKT) {
+            public CT_NV_KHUCHUATRIRow AddCT_NV_KHUCHUATRIRow(NHANVIENRow parentNHANVIENRowByFK_NHANVIEN_CT_NV_KHUCHUATRI, KHUCHUATRIRow parentKHUCHUATRIRowByFK_SoKhu_CT_NV_KHUCHUATRI, System.DateTime NgayBD, System.DateTime NgayKT) {
                 CT_NV_KHUCHUATRIRow rowCT_NV_KHUCHUATRIRow = ((CT_NV_KHUCHUATRIRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         NgayBD,
                         NgayKT};
-                if ((parentYTARowByFK_CT_NV_KHUCHUATRI_YTA != null)) {
-                    columnValuesArray[0] = parentYTARowByFK_CT_NV_KHUCHUATRI_YTA[0];
+                if ((parentNHANVIENRowByFK_NHANVIEN_CT_NV_KHUCHUATRI != null)) {
+                    columnValuesArray[0] = parentNHANVIENRowByFK_NHANVIEN_CT_NV_KHUCHUATRI[0];
                 }
                 if ((parentKHUCHUATRIRowByFK_SoKhu_CT_NV_KHUCHUATRI != null)) {
                     columnValuesArray[1] = parentKHUCHUATRIRowByFK_SoKhu_CT_NV_KHUCHUATRI[0];
@@ -6222,12 +6230,12 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public YTARow YTARow {
+            public NHANVIENRow NHANVIENRow {
                 get {
-                    return ((YTARow)(this.GetParentRow(this.Table.ParentRelations["FK_CT_NV_KHUCHUATRI_YTA"])));
+                    return ((NHANVIENRow)(this.GetParentRow(this.Table.ParentRelations["FK_NHANVIEN_CT_NV_KHUCHUATRI"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_CT_NV_KHUCHUATRI_YTA"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_NHANVIEN_CT_NV_KHUCHUATRI"]);
                 }
             }
             
@@ -6522,6 +6530,17 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CT_NV_KHUCHUATRIRow[] GetCT_NV_KHUCHUATRIRows() {
+                if ((this.Table.ChildRelations["FK_NHANVIEN_CT_NV_KHUCHUATRI"] == null)) {
+                    return new CT_NV_KHUCHUATRIRow[0];
+                }
+                else {
+                    return ((CT_NV_KHUCHUATRIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_NHANVIEN_CT_NV_KHUCHUATRI"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public BACSIRow[] GetBACSIRows() {
                 if ((this.Table.ChildRelations["FK_BACSI_NHANVIEN"] == null)) {
                     return new BACSIRow[0];
@@ -6733,17 +6752,6 @@ namespace BENHVIEN {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_YTA_NHANVIEN"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CT_NV_KHUCHUATRIRow[] GetCT_NV_KHUCHUATRIRows() {
-                if ((this.Table.ChildRelations["FK_CT_NV_KHUCHUATRI_YTA"] == null)) {
-                    return new CT_NV_KHUCHUATRIRow[0];
-                }
-                else {
-                    return ((CT_NV_KHUCHUATRIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CT_NV_KHUCHUATRI_YTA"])));
                 }
             }
             
