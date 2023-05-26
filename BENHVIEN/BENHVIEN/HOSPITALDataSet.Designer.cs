@@ -76,8 +76,6 @@ namespace BENHVIEN {
         
         private global::System.Data.DataRelation relationFK_SoKhu_GIUONGBENH;
         
-        private global::System.Data.DataRelation relationFK_KHUCHUATRI_YTA;
-        
         private global::System.Data.DataRelation relationFK_YTA_NHANVIEN;
         
         private global::System.Data.DataRelation relationFK_CT_BACSI_CHUATRI_BENHNHAN_BACSI1;
@@ -579,7 +577,6 @@ namespace BENHVIEN {
             this.relationFK_MaVT_CT_HOADON = this.Relations["FK_MaVT_CT_HOADON"];
             this.relationFK_SoKhu_CT_NV_KHUCHUATRI = this.Relations["FK_SoKhu_CT_NV_KHUCHUATRI"];
             this.relationFK_SoKhu_GIUONGBENH = this.Relations["FK_SoKhu_GIUONGBENH"];
-            this.relationFK_KHUCHUATRI_YTA = this.Relations["FK_KHUCHUATRI_YTA"];
             this.relationFK_YTA_NHANVIEN = this.Relations["FK_YTA_NHANVIEN"];
             this.relationFK_CT_BACSI_CHUATRI_BENHNHAN_BACSI1 = this.Relations["FK_CT_BACSI_CHUATRI_BENHNHAN_BACSI1"];
             this.relationFK_BACSI_NHANVIEN1 = this.Relations["FK_BACSI_NHANVIEN1"];
@@ -679,10 +676,6 @@ namespace BENHVIEN {
                         this.tableKHUCHUATRI.SoKhuColumn}, new global::System.Data.DataColumn[] {
                         this.tableGIUONGBENH.SoKhuColumn}, false);
             this.Relations.Add(this.relationFK_SoKhu_GIUONGBENH);
-            this.relationFK_KHUCHUATRI_YTA = new global::System.Data.DataRelation("FK_KHUCHUATRI_YTA", new global::System.Data.DataColumn[] {
-                        this.tableYTA.MaYTColumn}, new global::System.Data.DataColumn[] {
-                        this.tableKHUCHUATRI.MaYTaTruongColumn}, false);
-            this.Relations.Add(this.relationFK_KHUCHUATRI_YTA);
             this.relationFK_YTA_NHANVIEN = new global::System.Data.DataRelation("FK_YTA_NHANVIEN", new global::System.Data.DataColumn[] {
                         this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
                         this.tableYTA.MaYTColumn}, false);
@@ -3263,15 +3256,12 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public KHUCHUATRIRow AddKHUCHUATRIRow(string SoKhu, string Ten, YTARow parentYTARowByFK_KHUCHUATRI_YTA) {
+            public KHUCHUATRIRow AddKHUCHUATRIRow(string SoKhu, string Ten, string MaYTaTruong) {
                 KHUCHUATRIRow rowKHUCHUATRIRow = ((KHUCHUATRIRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SoKhu,
                         Ten,
-                        null};
-                if ((parentYTARowByFK_KHUCHUATRI_YTA != null)) {
-                    columnValuesArray[2] = parentYTARowByFK_KHUCHUATRI_YTA[0];
-                }
+                        MaYTaTruong};
                 rowKHUCHUATRIRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKHUCHUATRIRow);
                 return rowKHUCHUATRIRow;
@@ -6398,17 +6388,6 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public YTARow YTARow {
-                get {
-                    return ((YTARow)(this.GetParentRow(this.Table.ParentRelations["FK_KHUCHUATRI_YTA"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_KHUCHUATRI_YTA"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaYTaTruongNull() {
                 return this.IsNull(this.tableKHUCHUATRI.MaYTaTruongColumn);
             }
@@ -6752,17 +6731,6 @@ namespace BENHVIEN {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_YTA_NHANVIEN"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public KHUCHUATRIRow[] GetKHUCHUATRIRows() {
-                if ((this.Table.ChildRelations["FK_KHUCHUATRI_YTA"] == null)) {
-                    return new KHUCHUATRIRow[0];
-                }
-                else {
-                    return ((KHUCHUATRIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_KHUCHUATRI_YTA"])));
                 }
             }
         }
@@ -13080,15 +13048,6 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._yTATableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._yTATableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._bENHNHANTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.BENHNHAN.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -13170,6 +13129,15 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._yTATableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._yTATableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -13193,14 +13161,6 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._bACSITableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._yTATableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._yTATableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13276,6 +13236,14 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._yTATableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._yTATableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -13286,6 +13254,14 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(HOSPITALDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._yTATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._yTATableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._cT_NV_KHUCHUATRITableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CT_NV_KHUCHUATRI.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -13355,14 +13331,6 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._bENHNHANTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._yTATableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._yTATableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
