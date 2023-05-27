@@ -127,8 +127,6 @@ namespace BENHVIEN
 
 
 
-
-
                             queryUndo =
                                 "UPDATE DBO.SUCHUATRI " +
                                 "SET " +
@@ -219,6 +217,11 @@ string.Format("INSERT INTO DBO.SUCHUATRI(MaSuChuaTri, TenSuChuaTri) " +
             else
             {
                 undoList.Pop();
+            }
+
+            if (SUCHUATRI_BDS.Count == 0)
+            { 
+                btnXOA.Enabled = false;
             }
         }
 

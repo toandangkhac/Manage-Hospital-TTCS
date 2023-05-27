@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSuChuaTri));
             System.Windows.Forms.Label maSuChuaTriLabel;
             System.Windows.Forms.Label tenSuChuaTriLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSuChuaTri));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnTHEM = new DevExpress.XtraBars.BarButtonItem();
@@ -47,28 +47,46 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnCHUYENCHINHANH = new DevExpress.XtraBars.BarButtonItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.HOSPITAL_DS = new BENHVIEN.HOSPITALDataSet();
             this.SUCHUATRI_BDS = new System.Windows.Forms.BindingSource(this.components);
-            this.SUCHUATRITableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.SUCHUATRITableAdapter();
-            this.tableAdapterManager = new BENHVIEN.HOSPITALDataSetTableAdapters.TableAdapterManager();
+            this.HOSPITAL_DS = new BENHVIEN.HOSPITALDataSet();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaSuChuaTri = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenSuChuaTri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SUCHUATRITableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.SUCHUATRITableAdapter();
+            this.tableAdapterManager = new BENHVIEN.HOSPITALDataSetTableAdapters.TableAdapterManager();
+            this.CT_BACSI_CHUATRI_BENHNHANTableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.CT_BACSI_CHUATRI_BENHNHANTableAdapter();
             this.txtMaSCT = new DevExpress.XtraEditors.TextEdit();
             this.txtTenSCT = new DevExpress.XtraEditors.TextEdit();
             this.CT_BACSI_CHUATRI_BENHNHAN_BDS = new System.Windows.Forms.BindingSource(this.components);
-            this.CT_BACSI_CHUATRI_BENHNHANTableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.CT_BACSI_CHUATRI_BENHNHANTableAdapter();
             maSuChuaTriLabel = new System.Windows.Forms.Label();
             tenSuChuaTriLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HOSPITAL_DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SUCHUATRI_BDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HOSPITAL_DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSCT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSCT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CT_BACSI_CHUATRI_BENHNHAN_BDS)).BeginInit();
             this.SuspendLayout();
+            // 
+            // maSuChuaTriLabel
+            // 
+            maSuChuaTriLabel.AutoSize = true;
+            maSuChuaTriLabel.Location = new System.Drawing.Point(109, 450);
+            maSuChuaTriLabel.Name = "maSuChuaTriLabel";
+            maSuChuaTriLabel.Size = new System.Drawing.Size(88, 16);
+            maSuChuaTriLabel.TabIndex = 5;
+            maSuChuaTriLabel.Text = "Mã sự chữa trị";
+            // 
+            // tenSuChuaTriLabel
+            // 
+            tenSuChuaTriLabel.AutoSize = true;
+            tenSuChuaTriLabel.Location = new System.Drawing.Point(357, 453);
+            tenSuChuaTriLabel.Name = "tenSuChuaTriLabel";
+            tenSuChuaTriLabel.Size = new System.Drawing.Size(93, 16);
+            tenSuChuaTriLabel.TabIndex = 7;
+            tenSuChuaTriLabel.Text = "Tên sự chữa trị";
             // 
             // barManager1
             // 
@@ -223,6 +241,16 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // SUCHUATRI_BDS
+            // 
+            this.SUCHUATRI_BDS.DataMember = "SUCHUATRI";
+            this.SUCHUATRI_BDS.DataSource = this.HOSPITAL_DS;
+            // 
+            // HOSPITAL_DS
+            // 
+            this.HOSPITAL_DS.DataSetName = "HOSPITALDataSet";
+            this.HOSPITAL_DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -230,16 +258,25 @@
             this.colTenSuChuaTri});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
-            // HOSPITAL_DS
+            // colMaSuChuaTri
             // 
-            this.HOSPITAL_DS.DataSetName = "HOSPITALDataSet";
-            this.HOSPITAL_DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.colMaSuChuaTri.FieldName = "MaSuChuaTri";
+            this.colMaSuChuaTri.MinWidth = 25;
+            this.colMaSuChuaTri.Name = "colMaSuChuaTri";
+            this.colMaSuChuaTri.Visible = true;
+            this.colMaSuChuaTri.VisibleIndex = 0;
+            this.colMaSuChuaTri.Width = 219;
             // 
-            // SUCHUATRI_BDS
+            // colTenSuChuaTri
             // 
-            this.SUCHUATRI_BDS.DataMember = "SUCHUATRI";
-            this.SUCHUATRI_BDS.DataSource = this.HOSPITAL_DS;
+            this.colTenSuChuaTri.FieldName = "TenSuChuaTri";
+            this.colTenSuChuaTri.MinWidth = 25;
+            this.colTenSuChuaTri.Name = "colTenSuChuaTri";
+            this.colTenSuChuaTri.Visible = true;
+            this.colTenSuChuaTri.VisibleIndex = 1;
+            this.colTenSuChuaTri.Width = 1015;
             // 
             // SUCHUATRITableAdapter
             // 
@@ -262,32 +299,9 @@
             this.tableAdapterManager.VATTUTableAdapter = null;
             this.tableAdapterManager.YTATableAdapter = null;
             // 
-            // colMaSuChuaTri
+            // CT_BACSI_CHUATRI_BENHNHANTableAdapter
             // 
-            this.colMaSuChuaTri.FieldName = "MaSuChuaTri";
-            this.colMaSuChuaTri.MinWidth = 25;
-            this.colMaSuChuaTri.Name = "colMaSuChuaTri";
-            this.colMaSuChuaTri.Visible = true;
-            this.colMaSuChuaTri.VisibleIndex = 0;
-            this.colMaSuChuaTri.Width = 219;
-            // 
-            // colTenSuChuaTri
-            // 
-            this.colTenSuChuaTri.FieldName = "TenSuChuaTri";
-            this.colTenSuChuaTri.MinWidth = 25;
-            this.colTenSuChuaTri.Name = "colTenSuChuaTri";
-            this.colTenSuChuaTri.Visible = true;
-            this.colTenSuChuaTri.VisibleIndex = 1;
-            this.colTenSuChuaTri.Width = 1015;
-            // 
-            // maSuChuaTriLabel
-            // 
-            maSuChuaTriLabel.AutoSize = true;
-            maSuChuaTriLabel.Location = new System.Drawing.Point(109, 450);
-            maSuChuaTriLabel.Name = "maSuChuaTriLabel";
-            maSuChuaTriLabel.Size = new System.Drawing.Size(88, 16);
-            maSuChuaTriLabel.TabIndex = 5;
-            maSuChuaTriLabel.Text = "Mã sự chữa trị";
+            this.CT_BACSI_CHUATRI_BENHNHANTableAdapter.ClearBeforeFill = true;
             // 
             // txtMaSCT
             // 
@@ -298,15 +312,6 @@
             this.txtMaSCT.Name = "txtMaSCT";
             this.txtMaSCT.Size = new System.Drawing.Size(125, 22);
             this.txtMaSCT.TabIndex = 6;
-            // 
-            // tenSuChuaTriLabel
-            // 
-            tenSuChuaTriLabel.AutoSize = true;
-            tenSuChuaTriLabel.Location = new System.Drawing.Point(357, 453);
-            tenSuChuaTriLabel.Name = "tenSuChuaTriLabel";
-            tenSuChuaTriLabel.Size = new System.Drawing.Size(93, 16);
-            tenSuChuaTriLabel.TabIndex = 7;
-            tenSuChuaTriLabel.Text = "Tên sự chữa trị";
             // 
             // txtTenSCT
             // 
@@ -321,10 +326,6 @@
             // 
             this.CT_BACSI_CHUATRI_BENHNHAN_BDS.DataMember = "FK_MaSuChuaTri_CT_BACSI_CHUATRI_BENHNHAN";
             this.CT_BACSI_CHUATRI_BENHNHAN_BDS.DataSource = this.SUCHUATRI_BDS;
-            // 
-            // CT_BACSI_CHUATRI_BENHNHANTableAdapter
-            // 
-            this.CT_BACSI_CHUATRI_BENHNHANTableAdapter.ClearBeforeFill = true;
             // 
             // FormSuChuaTri
             // 
@@ -346,9 +347,9 @@
             this.Load += new System.EventHandler(this.FormSuChuaTri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HOSPITAL_DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SUCHUATRI_BDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HOSPITAL_DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSCT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSCT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CT_BACSI_CHUATRI_BENHNHAN_BDS)).EndInit();

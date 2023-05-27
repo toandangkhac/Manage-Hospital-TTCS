@@ -38,7 +38,7 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.qlbs = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageNV = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -72,7 +72,7 @@
             this.barButtonItem4,
             this.barButtonItem5,
             this.qlbs,
-            this.barButtonItem6});
+            this.barButtonItem7});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
             this.ribbonControl1.MaxItemId = 10;
@@ -145,12 +145,12 @@
             this.qlbs.Name = "qlbs";
             this.qlbs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.qlbs_ItemClick);
             // 
-            // barButtonItem6
+            // barButtonItem7
             // 
-            this.barButtonItem6.Caption = "Danh sách sự chữa trị";
-            this.barButtonItem6.Id = 9;
-            this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            this.barButtonItem7.Caption = "Danh sách sự chữa trị";
+            this.barButtonItem7.Id = 9;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -189,7 +189,7 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Chữa trị";
             // 
@@ -294,7 +294,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem qlbs;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }

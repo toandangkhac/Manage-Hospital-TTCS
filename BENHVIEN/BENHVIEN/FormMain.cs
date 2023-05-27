@@ -185,7 +185,7 @@ namespace BENHVIEN
             }
         }
 
-        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form f = CheckExists(typeof(FormSuChuaTri)); 
             if (f != null)
