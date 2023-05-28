@@ -56,11 +56,15 @@ namespace BENHVIEN {
         
         private THONGTINYTADataTable tableTHONGTINYTA;
         
+        private global::System.Data.DataRelation relationFK_BACSI_BENHNHAN;
+        
         private global::System.Data.DataRelation relationFK_NHANVIEN_CT_NV_KHUCHUATRI;
         
-        private global::System.Data.DataRelation relationFK_NHANVIEN_THONGTINYTA;
+        private global::System.Data.DataRelation relationFK_YTA_KHUCHUATRI;
         
         private global::System.Data.DataRelation relationFK_YTA_THONGTINYTA;
+        
+        private global::System.Data.DataRelation relationFK_NHANVIEN_THONGTINYTA;
         
         private global::System.Data.DataRelation relationFK_BACSI_NHANVIEN;
         
@@ -594,9 +598,11 @@ namespace BENHVIEN {
                     this.tableTHONGTINYTA.InitVars();
                 }
             }
+            this.relationFK_BACSI_BENHNHAN = this.Relations["FK_BACSI_BENHNHAN"];
             this.relationFK_NHANVIEN_CT_NV_KHUCHUATRI = this.Relations["FK_NHANVIEN_CT_NV_KHUCHUATRI"];
-            this.relationFK_NHANVIEN_THONGTINYTA = this.Relations["FK_NHANVIEN_THONGTINYTA"];
+            this.relationFK_YTA_KHUCHUATRI = this.Relations["FK_YTA_KHUCHUATRI"];
             this.relationFK_YTA_THONGTINYTA = this.Relations["FK_YTA_THONGTINYTA"];
+            this.relationFK_NHANVIEN_THONGTINYTA = this.Relations["FK_NHANVIEN_THONGTINYTA"];
             this.relationFK_BACSI_NHANVIEN = this.Relations["FK_BACSI_NHANVIEN"];
             this.relationFK_CT_BACSI_CHUATRI_BENHNHAN_BACSI = this.Relations["FK_CT_BACSI_CHUATRI_BENHNHAN_BACSI"];
             this.relationFK_MaBenhNhan_CT_BACSI_CHUATRI_BENHNHAN = this.Relations["FK_MaBenhNhan_CT_BACSI_CHUATRI_BENHNHAN"];
@@ -657,6 +663,13 @@ namespace BENHVIEN {
             this.tableTHONGTINYTA = new THONGTINYTADataTable();
             base.Tables.Add(this.tableTHONGTINYTA);
             global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_BACSI_BENHNHAN", new global::System.Data.DataColumn[] {
+                        this.tableBACSI.MaBacSiColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBENHNHAN.MaBacSiTheoDoiColumn});
+            this.tableBENHNHAN.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_NHANVIEN_CT_NV_KHUCHUATRI", new global::System.Data.DataColumn[] {
                         this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_NV_KHUCHUATRI.MaNVColumn});
@@ -664,10 +677,10 @@ namespace BENHVIEN {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_NHANVIEN_THONGTINYTA", new global::System.Data.DataColumn[] {
-                        this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTHONGTINYTA.MaYTColumn});
-            this.tableTHONGTINYTA.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_YTA_KHUCHUATRI", new global::System.Data.DataColumn[] {
+                        this.tableYTA.MaYTColumn}, new global::System.Data.DataColumn[] {
+                        this.tableKHUCHUATRI.MaYTaTruongColumn});
+            this.tableKHUCHUATRI.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -678,18 +691,33 @@ namespace BENHVIEN {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_NHANVIEN_THONGTINYTA", new global::System.Data.DataColumn[] {
+                        this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTHONGTINYTA.MaYTColumn});
+            this.tableTHONGTINYTA.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationFK_BACSI_BENHNHAN = new global::System.Data.DataRelation("FK_BACSI_BENHNHAN", new global::System.Data.DataColumn[] {
+                        this.tableBACSI.MaBacSiColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBENHNHAN.MaBacSiTheoDoiColumn}, false);
+            this.Relations.Add(this.relationFK_BACSI_BENHNHAN);
             this.relationFK_NHANVIEN_CT_NV_KHUCHUATRI = new global::System.Data.DataRelation("FK_NHANVIEN_CT_NV_KHUCHUATRI", new global::System.Data.DataColumn[] {
                         this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_NV_KHUCHUATRI.MaNVColumn}, false);
             this.Relations.Add(this.relationFK_NHANVIEN_CT_NV_KHUCHUATRI);
-            this.relationFK_NHANVIEN_THONGTINYTA = new global::System.Data.DataRelation("FK_NHANVIEN_THONGTINYTA", new global::System.Data.DataColumn[] {
-                        this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTHONGTINYTA.MaYTColumn}, false);
-            this.Relations.Add(this.relationFK_NHANVIEN_THONGTINYTA);
+            this.relationFK_YTA_KHUCHUATRI = new global::System.Data.DataRelation("FK_YTA_KHUCHUATRI", new global::System.Data.DataColumn[] {
+                        this.tableYTA.MaYTColumn}, new global::System.Data.DataColumn[] {
+                        this.tableKHUCHUATRI.MaYTaTruongColumn}, false);
+            this.Relations.Add(this.relationFK_YTA_KHUCHUATRI);
             this.relationFK_YTA_THONGTINYTA = new global::System.Data.DataRelation("FK_YTA_THONGTINYTA", new global::System.Data.DataColumn[] {
                         this.tableYTA.MaYTColumn}, new global::System.Data.DataColumn[] {
                         this.tableTHONGTINYTA.MaYTColumn}, false);
             this.Relations.Add(this.relationFK_YTA_THONGTINYTA);
+            this.relationFK_NHANVIEN_THONGTINYTA = new global::System.Data.DataRelation("FK_NHANVIEN_THONGTINYTA", new global::System.Data.DataColumn[] {
+                        this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTHONGTINYTA.MaYTColumn}, false);
+            this.Relations.Add(this.relationFK_NHANVIEN_THONGTINYTA);
             this.relationFK_BACSI_NHANVIEN = new global::System.Data.DataRelation("FK_BACSI_NHANVIEN", new global::System.Data.DataColumn[] {
                         this.tableNHANVIEN.MaNVColumn}, new global::System.Data.DataColumn[] {
                         this.tableBACSI.MaBacSiColumn}, false);
@@ -1384,7 +1412,7 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BENHNHANRow AddBENHNHANRow(string MaBenhNhan, string Ho, string Ten, System.DateTime NgaySinh, bool MaLoai, string MaBacSiTheoDoi, string MaBacSiTiepNhan) {
+            public BENHNHANRow AddBENHNHANRow(string MaBenhNhan, string Ho, string Ten, System.DateTime NgaySinh, bool MaLoai, BACSIRow parentBACSIRowByFK_BACSI_BENHNHAN, string MaBacSiTiepNhan) {
                 BENHNHANRow rowBENHNHANRow = ((BENHNHANRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaBenhNhan,
@@ -1392,8 +1420,11 @@ namespace BENHVIEN {
                         Ten,
                         NgaySinh,
                         MaLoai,
-                        MaBacSiTheoDoi,
+                        null,
                         MaBacSiTiepNhan};
+                if ((parentBACSIRowByFK_BACSI_BENHNHAN != null)) {
+                    columnValuesArray[5] = parentBACSIRowByFK_BACSI_BENHNHAN[0];
+                }
                 rowBENHNHANRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBENHNHANRow);
                 return rowBENHNHANRow;
@@ -3319,12 +3350,15 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public KHUCHUATRIRow AddKHUCHUATRIRow(string SoKhu, string Ten, string MaYTaTruong) {
+            public KHUCHUATRIRow AddKHUCHUATRIRow(string SoKhu, string Ten, YTARow parentYTARowByFK_YTA_KHUCHUATRI) {
                 KHUCHUATRIRow rowKHUCHUATRIRow = ((KHUCHUATRIRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SoKhu,
                         Ten,
-                        MaYTaTruong};
+                        null};
+                if ((parentYTARowByFK_YTA_KHUCHUATRI != null)) {
+                    columnValuesArray[2] = parentYTARowByFK_YTA_KHUCHUATRI[0];
+                }
                 rowKHUCHUATRIRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKHUCHUATRIRow);
                 return rowKHUCHUATRIRow;
@@ -5733,7 +5767,7 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public THONGTINYTARow AddTHONGTINYTARow(NHANVIENRow parentNHANVIENRowByFK_NHANVIEN_THONGTINYTA, string Ho, string Ten, bool Phai, string SDT) {
+            public THONGTINYTARow AddTHONGTINYTARow(YTARow parentYTARowByFK_YTA_THONGTINYTA, string Ho, string Ten, bool Phai, string SDT) {
                 THONGTINYTARow rowTHONGTINYTARow = ((THONGTINYTARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5741,8 +5775,8 @@ namespace BENHVIEN {
                         Ten,
                         Phai,
                         SDT};
-                if ((parentNHANVIENRowByFK_NHANVIEN_THONGTINYTA != null)) {
-                    columnValuesArray[0] = parentNHANVIENRowByFK_NHANVIEN_THONGTINYTA[0];
+                if ((parentYTARowByFK_YTA_THONGTINYTA != null)) {
+                    columnValuesArray[0] = parentYTARowByFK_YTA_THONGTINYTA[0];
                 }
                 rowTHONGTINYTARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTHONGTINYTARow);
@@ -5979,6 +6013,17 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public BENHNHANRow[] GetBENHNHANRows() {
+                if ((this.Table.ChildRelations["FK_BACSI_BENHNHAN"] == null)) {
+                    return new BENHNHANRow[0];
+                }
+                else {
+                    return ((BENHNHANRow[])(base.GetChildRows(this.Table.ChildRelations["FK_BACSI_BENHNHAN"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CT_BACSI_CHUATRI_BENHNHANRow[] GetCT_BACSI_CHUATRI_BENHNHANRows() {
                 if ((this.Table.ChildRelations["FK_CT_BACSI_CHUATRI_BENHNHAN_BACSI"] == null)) {
                     return new CT_BACSI_CHUATRI_BENHNHANRow[0];
@@ -6098,6 +6143,17 @@ namespace BENHVIEN {
                 }
                 set {
                     this[this.tableBENHNHAN.MaBacSiTiepNhanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public BACSIRow BACSIRow {
+                get {
+                    return ((BACSIRow)(this.GetParentRow(this.Table.ParentRelations["FK_BACSI_BENHNHAN"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_BACSI_BENHNHAN"]);
                 }
             }
             
@@ -6775,6 +6831,17 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public YTARow YTARow {
+                get {
+                    return ((YTARow)(this.GetParentRow(this.Table.ParentRelations["FK_YTA_KHUCHUATRI"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_YTA_KHUCHUATRI"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaYTaTruongNull() {
                 return this.IsNull(this.tableKHUCHUATRI.MaYTaTruongColumn);
             }
@@ -7142,6 +7209,17 @@ namespace BENHVIEN {
                     return ((THONGTINYTARow[])(base.GetChildRows(this.Table.ChildRelations["FK_YTA_THONGTINYTA"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public KHUCHUATRIRow[] GetKHUCHUATRIRows() {
+                if ((this.Table.ChildRelations["FK_YTA_KHUCHUATRI"] == null)) {
+                    return new KHUCHUATRIRow[0];
+                }
+                else {
+                    return ((KHUCHUATRIRow[])(base.GetChildRows(this.Table.ChildRelations["FK_YTA_KHUCHUATRI"])));
+                }
+            }
         }
         
         /// <summary>
@@ -7491,23 +7569,23 @@ namespace BENHVIEN {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public NHANVIENRow NHANVIENRow {
-                get {
-                    return ((NHANVIENRow)(this.GetParentRow(this.Table.ParentRelations["FK_NHANVIEN_THONGTINYTA"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_NHANVIEN_THONGTINYTA"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public YTARow YTARow {
                 get {
                     return ((YTARow)(this.GetParentRow(this.Table.ParentRelations["FK_YTA_THONGTINYTA"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_YTA_THONGTINYTA"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public NHANVIENRow NHANVIENRow {
+                get {
+                    return ((NHANVIENRow)(this.GetParentRow(this.Table.ParentRelations["FK_NHANVIEN_THONGTINYTA"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_NHANVIEN_THONGTINYTA"]);
                 }
             }
             
@@ -13772,6 +13850,15 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._yTATableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._yTATableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._bENHNHANTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.BENHNHAN.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -13823,15 +13910,6 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._vATTUTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._yTATableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._yTATableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13888,6 +13966,14 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._yTATableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._yTATableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._bENHNHANTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.BENHNHAN.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -13933,14 +14019,6 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._vATTUTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._yTATableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._yTATableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14002,14 +14080,6 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._yTATableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._yTATableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._vATTUTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.VATTU.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -14055,6 +14125,14 @@ SELECT MaVT, MoTa, DonGia FROM VATTU WHERE (MaVT = @MaVT)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._bENHNHANTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._yTATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.YTA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._yTATableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

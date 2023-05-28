@@ -75,6 +75,7 @@ namespace BENHVIEN
         public static String maGiuong = "";
         public static String maBN = "";
         public static String maNV = "";
+        public static String maKhu = "";
 
         /*
          * mở kết nối tới server 

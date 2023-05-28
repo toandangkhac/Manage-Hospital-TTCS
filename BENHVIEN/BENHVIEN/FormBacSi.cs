@@ -37,6 +37,10 @@ namespace BENHVIEN
             this.tHONGTINTableAdapter.Connection.ConnectionString = Program.connstr;
             this.tHONGTINTableAdapter.Fill(this.DS.THONGTIN);
 
+            this.bENHNHANTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.bENHNHANTableAdapter.Fill(this.DS.BENHNHAN);
+            this.cT_BACSI_CHUATRI_BENHNHANTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.cT_BACSI_CHUATRI_BENHNHANTableAdapter.Fill(this.DS.CT_BACSI_CHUATRI_BENHNHAN);
 
 
         }
@@ -199,6 +203,21 @@ namespace BENHVIEN
 
         private void btnXOA_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+            if (bdsBACSI.Count == 0)
+            {
+                btnXOA.Enabled = false;
+            }
+
+
+            if (cT_BACSI_CHUATRI_BENHNHANBindingSource.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá bác sĩ này vì có chi tiết chữa trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+          
+
             DataRowView drv = ((DataRowView)bdsBACSI[bdsBACSI.Position]);
             String maBS = drv["mabacsi"].ToString();
             String trinhDo = drv["trinhdo"].ToString();

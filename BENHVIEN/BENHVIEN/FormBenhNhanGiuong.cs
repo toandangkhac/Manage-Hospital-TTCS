@@ -182,7 +182,8 @@ namespace BENHVIEN
                         {
                             queryUndo = "" +
                                 "DELETE DBO.CT_BENHNHAN_GIUONG " +
-                                "WHERE MABENHNHAN = '" + txtMABN.Text.Trim()+ "' AND MAGIUONG = '" + txtMAGIUONG.Text.Trim()+"'";
+                                "WHERE MABENHNHAN = '" + txtMABN.Text.Trim()+ "' AND MAGIUONG = '" + txtMAGIUONG.Text.Trim()+ "' AND ngayBD = '" + dteNGAYBD.Text + "'";
+                         
                         }
                         /*trước khi ấn btnGHI là sửa thông tin nhân viên*/
                         else
@@ -196,7 +197,7 @@ namespace BENHVIEN
                                 "MAGIUONG = '" + maG + "'," +
                                 "NGAYBD = '" + ngayBD + "' ," +
                                 "NGAYKT = '" + ngayKT + "'" +
-                                "WHERE MABENHNHAN = '" + txtMABN.Text.Trim() + "' AND MAGIUONG = '" + txtMAGIUONG.Text.Trim()+"'";
+                                  "WHERE MABENHNHAN = '" + txtMABN.Text.Trim() + "' AND MAGIUONG = '" + txtMAGIUONG.Text.Trim() + "' AND ngayBD = '" + dteNGAYBD.Text + "'";
                         }
 
 
