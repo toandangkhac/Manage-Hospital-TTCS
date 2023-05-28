@@ -55,6 +55,8 @@
             this.MA = new System.Windows.Forms.ToolStripStatusLabel();
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.QUYEN = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,10 +77,11 @@
             this.barButtonItem5,
             this.qlbs,
             this.barButtonItem7,
-            this.qlyt});
+            this.qlyt,
+            this.barButtonItem6});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 481;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -213,7 +216,8 @@
             this.pageYTT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup8});
             this.pageYTT.Name = "pageYTT";
             this.pageYTT.Text = "Trang của Y Tá Trưởng";
             // 
@@ -262,6 +266,18 @@
             this.QUYEN.Name = "QUYEN";
             this.QUYEN.Size = new System.Drawing.Size(54, 20);
             this.QUYEN.Text = "Quyền:";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Quản Lý Làm Việc Của Nhân Viên";
+            this.barButtonItem6.Id = 11;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // FormMain
             // 
@@ -312,6 +328,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem qlyt;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }
 

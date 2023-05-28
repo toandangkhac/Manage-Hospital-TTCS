@@ -92,11 +92,23 @@
     <Compile Include="FormChon\FormChonGiuong.Designer.cs">
       <DependentUpon>FormChonGiuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChon\FormChonKhu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChon\FormChonKhu.Designer.cs">
+      <DependentUpon>FormChonKhu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChon\FormChonNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormChon\FormChonNhanVien.Designer.cs">
       <DependentUpon>FormChonNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCTNV_KCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCTNV_KCT.Designer.cs">
+      <DependentUpon>FormCTNV_KCT.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
@@ -162,8 +174,14 @@
     <EmbeddedResource Include="FormChon\FormChonGiuong.resx">
       <DependentUpon>FormChonGiuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChon\FormChonKhu.resx">
+      <DependentUpon>FormChonKhu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChon\FormChonNhanVien.resx">
       <DependentUpon>FormChonNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCTNV_KCT.resx">
+      <DependentUpon>FormCTNV_KCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>

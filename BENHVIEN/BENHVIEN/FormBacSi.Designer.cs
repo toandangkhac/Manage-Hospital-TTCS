@@ -66,8 +66,12 @@
             this.colSDT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtTRINHDO = new DevExpress.XtraEditors.TextEdit();
             this.txtMABS = new DevExpress.XtraEditors.TextEdit();
+            this.bdsBNTHEODOI = new System.Windows.Forms.BindingSource(this.components);
             this.tHONGTINTableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.THONGTINTableAdapter();
             this.tableAdapterManager = new BENHVIEN.HOSPITALDataSetTableAdapters.TableAdapterManager();
+            this.cT_BACSI_CHUATRI_BENHNHANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cT_BACSI_CHUATRI_BENHNHANTableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.CT_BACSI_CHUATRI_BENHNHANTableAdapter();
+            this.bENHNHANTableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.BENHNHANTableAdapter();
             maBacSiLabel = new System.Windows.Forms.Label();
             trinhDoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -81,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTRINHDO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMABS.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsBNTHEODOI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cT_BACSI_CHUATRI_BENHNHANBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // maBacSiLabel
@@ -97,7 +103,7 @@
             // 
             trinhDoLabel.AutoSize = true;
             trinhDoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trinhDoLabel.Location = new System.Drawing.Point(105, 159);
+            trinhDoLabel.Location = new System.Drawing.Point(105, 242);
             trinhDoLabel.Name = "trinhDoLabel";
             trinhDoLabel.Size = new System.Drawing.Size(93, 25);
             trinhDoLabel.TabIndex = 3;
@@ -272,10 +278,10 @@
             // 
             this.bACSIGridControl.DataSource = this.bdsBACSI;
             this.bACSIGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bACSIGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bACSIGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(8);
             this.bACSIGridControl.Location = new System.Drawing.Point(0, 30);
             this.bACSIGridControl.MainView = this.gridView1;
-            this.bACSIGridControl.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bACSIGridControl.Margin = new System.Windows.Forms.Padding(8);
             this.bACSIGridControl.MenuManager = this.barManager1;
             this.bACSIGridControl.Name = "bACSIGridControl";
             this.bACSIGridControl.Size = new System.Drawing.Size(1327, 341);
@@ -328,9 +334,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(217, 250);
+            this.button1.Location = new System.Drawing.Point(217, 136);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 45);
+            this.button1.Size = new System.Drawing.Size(246, 45);
             this.button1.TabIndex = 5;
             this.button1.Text = "Chọn Nhân Viên";
             this.button1.UseVisualStyleBackColor = true;
@@ -416,7 +422,7 @@
             // txtTRINHDO
             // 
             this.txtTRINHDO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBACSI, "TrinhDo", true));
-            this.txtTRINHDO.Location = new System.Drawing.Point(217, 153);
+            this.txtTRINHDO.Location = new System.Drawing.Point(217, 236);
             this.txtTRINHDO.Margin = new System.Windows.Forms.Padding(4);
             this.txtTRINHDO.MenuManager = this.barManager1;
             this.txtTRINHDO.Name = "txtTRINHDO";
@@ -438,6 +444,10 @@
             this.txtMABS.Size = new System.Drawing.Size(246, 30);
             this.txtMABS.TabIndex = 2;
             // 
+            // bdsBNTHEODOI
+            // 
+            this.bdsBNTHEODOI.DataSource = this.bdsBACSI;
+            // 
             // tHONGTINTableAdapter
             // 
             this.tHONGTINTableAdapter.ClearBeforeFill = true;
@@ -458,6 +468,19 @@
             this.tableAdapterManager.UpdateOrder = BENHVIEN.HOSPITALDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VATTUTableAdapter = null;
             this.tableAdapterManager.YTATableAdapter = null;
+            // 
+            // cT_BACSI_CHUATRI_BENHNHANBindingSource
+            // 
+            this.cT_BACSI_CHUATRI_BENHNHANBindingSource.DataMember = "FK_CT_BACSI_CHUATRI_BENHNHAN_BACSI";
+            this.cT_BACSI_CHUATRI_BENHNHANBindingSource.DataSource = this.bdsBACSI;
+            // 
+            // cT_BACSI_CHUATRI_BENHNHANTableAdapter
+            // 
+            this.cT_BACSI_CHUATRI_BENHNHANTableAdapter.ClearBeforeFill = true;
+            // 
+            // bENHNHANTableAdapter
+            // 
+            this.bENHNHANTableAdapter.ClearBeforeFill = true;
             // 
             // FormBacSi
             // 
@@ -486,6 +509,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTRINHDO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMABS.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsBNTHEODOI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cT_BACSI_CHUATRI_BENHNHANBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,5 +554,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPhai;
         private DevExpress.XtraGrid.Columns.GridColumn colSDT;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource cT_BACSI_CHUATRI_BENHNHANBindingSource;
+        private HOSPITALDataSetTableAdapters.CT_BACSI_CHUATRI_BENHNHANTableAdapter cT_BACSI_CHUATRI_BENHNHANTableAdapter;
+        private System.Windows.Forms.BindingSource bdsBNTHEODOI;
+        private HOSPITALDataSetTableAdapters.BENHNHANTableAdapter bENHNHANTableAdapter;
     }
 }
