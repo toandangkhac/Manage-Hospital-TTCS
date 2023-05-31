@@ -167,8 +167,9 @@ namespace BENHVIEN
                             queryUndo =
                                 "UPDATE DBO.Yta " +
                                 "SET " +
-                                "congviec = N'" + congViec + "' " +
-                                "WHERE mayt = '" + maYt + "'";
+                                "congviec = N'" + congViec + "', " +
+                                "mayt = N'" + maYt + "' " +
+                                "WHERE mayt = '" + txtMAYTA.Text + "'";
                         }
 
 

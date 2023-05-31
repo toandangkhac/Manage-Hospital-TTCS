@@ -72,6 +72,7 @@ namespace BENHVIEN
         public static String staff = "";//mHoten
 
         public static String maBS = "";
+        public static String maYT = "";
         public static String maGiuong = "";
         public static String maBN = "";
         public static String maNV = "";

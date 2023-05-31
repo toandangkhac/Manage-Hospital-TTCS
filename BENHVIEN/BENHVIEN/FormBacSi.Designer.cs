@@ -284,7 +284,7 @@
             this.bACSIGridControl.Margin = new System.Windows.Forms.Padding(8);
             this.bACSIGridControl.MenuManager = this.barManager1;
             this.bACSIGridControl.Name = "bACSIGridControl";
-            this.bACSIGridControl.Size = new System.Drawing.Size(1327, 341);
+            this.bACSIGridControl.Size = new System.Drawing.Size(1327, 384);
             this.bACSIGridControl.TabIndex = 4;
             this.bACSIGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -326,9 +326,9 @@
             this.panel1.Controls.Add(maBacSiLabel);
             this.panel1.Controls.Add(this.txtMABS);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 371);
+            this.panel1.Location = new System.Drawing.Point(0, 414);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1327, 542);
+            this.panel1.Size = new System.Drawing.Size(1327, 499);
             this.panel1.TabIndex = 5;
             // 
             // button1
@@ -352,7 +352,7 @@
             this.tHONGTINGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.tHONGTINGridControl.MenuManager = this.barManager1;
             this.tHONGTINGridControl.Name = "tHONGTINGridControl";
-            this.tHONGTINGridControl.Size = new System.Drawing.Size(786, 542);
+            this.tHONGTINGridControl.Size = new System.Drawing.Size(786, 499);
             this.tHONGTINGridControl.TabIndex = 4;
             this.tHONGTINGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
