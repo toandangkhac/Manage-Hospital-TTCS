@@ -12,59 +12,66 @@ using System.Windows.Forms;
 
 namespace BENHVIEN
 {
-    public partial class FormBacSi : Form
+    public partial class FormKCT : Form
     {
         int viTri = 0;
         bool dangThemMoi = false;
         Stack undoList = new Stack();
         int viTriThem = 0;
-
-        public FormBacSi()
+        public FormKCT()
         {
             InitializeComponent();
         }
 
-        private void FormBacSi_Load(object sender, EventArgs e)
+        private void kHUCHUATRIBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-           
-
-
-            DS.EnforceConstraints = false;
-
-            this.bACSITableAdapter.Connection.ConnectionString = Program.connstr;
-            this.bACSITableAdapter.Fill(this.DS.BACSI);
-
-            this.tHONGTINTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.tHONGTINTableAdapter.Fill(this.DS.THONGTIN);
-
-            this.bENHNHANTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.bENHNHANTableAdapter.Fill(this.DS.BENHNHAN);
-            this.cT_BACSI_CHUATRI_BENHNHANTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.cT_BACSI_CHUATRI_BENHNHANTableAdapter.Fill(this.DS.CT_BACSI_CHUATRI_BENHNHAN);
-
+            this.Validate();
+            this.bdsKCT.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.DS);
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormKCT_Load(object sender, EventArgs e)
         {
-            Form f = new FormChonNhanVien();
-            f.ShowDialog();
-            txtMABS.Text = Program.maNV;
-            Program.maNV = "";
 
+            DS.EnforceConstraints = false;
+
+            this.kHUCHUATRITableAdapter.Connection.ConnectionString = Program.connstr;
+            this.kHUCHUATRITableAdapter.Fill(this.DS.KHUCHUATRI);
+
+            this.cT_NV_KHUCHUATRITableAdapter.Connection.ConnectionString = Program.connstr;
+            this.cT_NV_KHUCHUATRITableAdapter.Fill(this.DS.CT_NV_KHUCHUATRI);
+
+            this.gIUONGBENHTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gIUONGBENHTableAdapter.Fill(this.DS.GIUONGBENH);
+
+        }
+
+        private void tenTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void soKhuTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maYTaTruongTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
 
         }
 
         private void btnTHEM_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             /*lấy vị trí hiện tại của con trỏ*/
-            viTri = bdsBACSI.Position;
+            viTri = bdsKCT.Position;
 
             dangThemMoi = true;
 
 
             /*AddNew tự động nhảy xuống cuối thêm 1 dòng mới*/
-            bdsBACSI.AddNew();
+            bdsKCT.AddNew();
 
             this.btnTHEM.Enabled = false;
             this.btnXOA.Enabled = false;
@@ -79,15 +86,21 @@ namespace BENHVIEN
         {
 
 
-            if (txtMABS.Text == "")
+            if (txtSOKHU.Text == "")
             {
-                MessageBox.Show("Không bỏ trống mã bác sĩ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không bỏ trống số khu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return false;
             }
-            if (txtTRINHDO.Text == "")
+            if (txtSOKHU.Text.Length >3)
             {
-                MessageBox.Show("Không bỏ trống trình độ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Số Khu chỉ tối đa 3 kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+            if (txtTENKHU.Text == "")
+            {
+                MessageBox.Show("Không bỏ trống tên khu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return false;
             }
@@ -104,16 +117,16 @@ namespace BENHVIEN
                 return;
 
 
-            viTriThem = bdsBACSI.Position;
+            viTriThem = bdsKCT.Position;
 
             /*Lay du lieu truoc khi chon btnGHI - phuc vu UNDO - sau khi OK thi da la du lieu moi*/
-            DataRowView drv = ((DataRowView)bdsBACSI[bdsBACSI.Position]);
+            DataRowView drv = ((DataRowView)bdsKCT[bdsKCT.Position]);
 
 
 
-            String maBS = drv["mabacsi"].ToString();
-            String trinhDo = drv["trinhdo"].ToString();
-
+            String soKhu = drv["sokhu"].ToString();
+            String tenKhu = drv["ten"].ToString();
+            String maytt = drv["maytatruong"].ToString();
 
             /*them moi | sua nhan vien*/
             {
@@ -134,8 +147,8 @@ namespace BENHVIEN
                         btnTHOAT.Enabled = true;
 
 
-                        this.bdsBACSI.EndEdit();
-                        this.bACSITableAdapter.Update(this.DS.BACSI);
+                        this.bdsKCT.EndEdit();
+                        this.kHUCHUATRITableAdapter.Update(this.DS.KHUCHUATRI);
 
 
                         /*lưu câu truy vấn để hoàn tác*/
@@ -146,8 +159,8 @@ namespace BENHVIEN
 
 
                             queryUndo = "" +
-                               "DELETE DBO.BACSI " +
-                               "WHERE maBacSi = '" + txtMABS.Text.Trim()+ "'";
+                               "DELETE DBO.KHUCHUATRI " +
+                               "WHERE soKhu = '" + txtSOKHU.Text.Trim() + "'";
 
 
                         }
@@ -156,11 +169,12 @@ namespace BENHVIEN
 
 
                             queryUndo =
-                                "UPDATE DBO.BACSI " +
+                                "UPDATE DBO.KHUCHUATRI " +
                                 "SET " +
-                                "TRINHDO = N'" + trinhDo +"', " +
-                                 "mabacsi = N'" + maBS + "' " +
-                                "WHERE MABACSI = '" + txtMABS.Text.Trim() + "'";
+                                "ten = N'" + tenKhu + "', " +
+                                "maytatruong = N'" + maytt + "', " +
+                                 "soKhu = N'" + soKhu + "' " +
+                                "WHERE sokhu = '" + txtSOKHU.Text.Trim() + "'";
                         }
 
 
@@ -174,14 +188,14 @@ namespace BENHVIEN
                     catch (Exception ex)
                     {
 
-                        bdsBACSI.RemoveCurrent();
+                        bdsKCT.RemoveCurrent();
                         MessageBox.Show("Thất bại. Vui lòng kiểm tra lại!\n" + ex.Message, "Lỗi",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    this.bACSITableAdapter.Fill(this.DS.BACSI);
-                    bdsBACSI.Position = viTriThem;
-              
-                    this.tHONGTINTableAdapter.Fill(this.DS.THONGTIN);
+                    this.kHUCHUATRITableAdapter.Fill(this.DS.KHUCHUATRI);
+                    bdsKCT.Position = viTriThem;
+
+                    this.kHUCHUATRITableAdapter.Fill(this.DS.KHUCHUATRI);
                 }
             }
         }
@@ -195,54 +209,62 @@ namespace BENHVIEN
         {
             DS.EnforceConstraints = false;
 
-            this.bACSITableAdapter.Connection.ConnectionString = Program.connstr;
-            this.bACSITableAdapter.Fill(this.DS.BACSI);
+            this.kHUCHUATRITableAdapter.Connection.ConnectionString = Program.connstr;
+            this.kHUCHUATRITableAdapter.Fill(this.DS.KHUCHUATRI);
 
-            this.tHONGTINTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.tHONGTINTableAdapter.Fill(this.DS.THONGTIN);
+            this.cT_NV_KHUCHUATRITableAdapter.Connection.ConnectionString = Program.connstr;
+            this.cT_NV_KHUCHUATRITableAdapter.Fill(this.DS.CT_NV_KHUCHUATRI);
+
+            this.gIUONGBENHTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gIUONGBENHTableAdapter.Fill(this.DS.GIUONGBENH);
         }
 
         private void btnXOA_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (bdsBACSI.Count == 0)
+            if (bdsKCT.Count == 0)
             {
                 btnXOA.Enabled = false;
             }
 
 
-            if (cT_BACSI_CHUATRI_BENHNHANBindingSource.Count > 0)
+            if (cT_NV_KHUCHUATRIBindingSource.Count > 0)
             {
-                MessageBox.Show("Không thể xoá bác sĩ này vì có chi tiết chữa trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể xoá KCT này vì có chi tiết nhân viên - KCT", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (gIUONGBENHBindingSource.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá KCT vì có chi tiết giường", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-          
 
-            DataRowView drv = ((DataRowView)bdsBACSI[bdsBACSI.Position]);
-            String maBS = drv["mabacsi"].ToString();
-            String trinhDo = drv["trinhdo"].ToString();
+            DataRowView drv = ((DataRowView)bdsKCT[bdsKCT.Position]);
+            String soKhu = drv["sokhu"].ToString();
+            String tenKhu = drv["ten"].ToString();
+            String maytt = drv["maytatruong"].ToString();
 
 
             string queryUndo =
-                string.Format("INSERT INTO DBO.BACSI( mabacsi,trinhdo)" +
-            "VALUES('{0}',N'{1}')", maBS, trinhDo);
+                string.Format("INSERT INTO DBO.KHUCHUATRI(sokhu,ten,maytatruong)" +
+            "VALUES('{0}',N'{1}',N'{2}')", soKhu, tenKhu,maytt);
 
 
             undoList.Push(queryUndo);
 
 
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa bác sĩ này không ?", "Thông báo",
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa KCT này không ?", "Thông báo",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 try
                 {
 
-                    viTri = bdsBACSI.Position;
-                    bdsBACSI.RemoveCurrent();
+                    viTri = bdsKCT.Position;
+                    bdsKCT.RemoveCurrent();
 
-                    this.bACSITableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.bACSITableAdapter.Update(this.DS.BACSI);
+                    this.kHUCHUATRITableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.kHUCHUATRITableAdapter.Update(this.DS.KHUCHUATRI);
 
                     MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK);
                     this.btnUNDO.Enabled = true;
@@ -251,9 +273,9 @@ namespace BENHVIEN
                 {
 
                     MessageBox.Show("Lỗi xóa nhân viên. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
-                    this.bACSITableAdapter.Fill(this.DS.BACSI);
+                    this.kHUCHUATRITableAdapter.Fill(this.DS.KHUCHUATRI);
                     // tro ve vi tri cua nhan vien dang bi loi
-                    bdsBACSI.Position = viTri;
+                    bdsKCT.Position = viTri;
 
                     return;
                 }
@@ -281,9 +303,9 @@ namespace BENHVIEN
                 dangThemMoi = false;
 
                 /*xoa dong hien tai*/
-                bdsBACSI.RemoveCurrent();
+                bdsKCT.RemoveCurrent();
                 /* trở về lúc đầu con trỏ đang đứng*/
-                bdsBACSI.Position = viTri;
+                bdsKCT.Position = viTri;
                 return;
             }
             if (undoList.Count == 0)
@@ -292,7 +314,7 @@ namespace BENHVIEN
                 btnUNDO.Enabled = false;
                 return;
             }
-            bdsBACSI.CancelEdit();
+            bdsKCT.CancelEdit();
             String queryUndo = undoList.Pop().ToString();
             {
                 if (Program.KetNoi() == 0)
@@ -302,7 +324,15 @@ namespace BENHVIEN
                 int n = Program.ExecSqlNonQuery(queryUndo);
 
             }
-            this.bACSITableAdapter.Fill(this.DS.BACSI);
+            this.kHUCHUATRITableAdapter.Fill(this.DS.KHUCHUATRI);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form f = new FormChonYTAcs();
+            f.ShowDialog();
+            txtYTT.Text = Program.maYT;
+            Program.maYT = "";
         }
     }
 }

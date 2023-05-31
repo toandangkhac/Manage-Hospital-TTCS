@@ -74,6 +74,9 @@
     <Compile Include="FormBenhNhanGiuong.Designer.cs">
       <DependentUpon>FormBenhNhanGiuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChonYTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormChon\FormChonBacSi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +107,12 @@
     <Compile Include="FormChon\FormChonNhanVien.Designer.cs">
       <DependentUpon>FormChonNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChon\FormChonYTAcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChon\FormChonYTAcs.Designer.cs">
+      <DependentUpon>FormChonYTAcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCTNV_KCT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +130,12 @@
     </Compile>
     <Compile Include="FormGiuong.Designer.cs">
       <DependentUpon>FormGiuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKCT.Designer.cs">
+      <DependentUpon>FormKCT.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -186,6 +201,9 @@
     <EmbeddedResource Include="FormChon\FormChonNhanVien.resx">
       <DependentUpon>FormChonNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChon\FormChonYTAcs.resx">
+      <DependentUpon>FormChonYTAcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCTNV_KCT.resx">
       <DependentUpon>FormCTNV_KCT.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiuong.resx">
       <DependentUpon>FormGiuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKCT.resx">
+      <DependentUpon>FormKCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
