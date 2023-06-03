@@ -90,7 +90,7 @@
             maNVLabel.Name = "maNVLabel";
             maNVLabel.Size = new System.Drawing.Size(79, 25);
             maNVLabel.TabIndex = 1;
-            maNVLabel.Text = "Ma NV:";
+            maNVLabel.Text = "Mã NV:";
             // 
             // soKhuLabel
             // 
@@ -100,27 +100,27 @@
             soKhuLabel.Name = "soKhuLabel";
             soKhuLabel.Size = new System.Drawing.Size(84, 25);
             soKhuLabel.TabIndex = 3;
-            soKhuLabel.Text = "So Khu:";
+            soKhuLabel.Text = "Số Khu:";
             // 
             // ngayBDLabel
             // 
             ngayBDLabel.AutoSize = true;
             ngayBDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngayBDLabel.Location = new System.Drawing.Point(257, 460);
+            ngayBDLabel.Location = new System.Drawing.Point(216, 458);
             ngayBDLabel.Name = "ngayBDLabel";
-            ngayBDLabel.Size = new System.Drawing.Size(96, 25);
+            ngayBDLabel.Size = new System.Drawing.Size(139, 25);
             ngayBDLabel.TabIndex = 5;
-            ngayBDLabel.Text = "Ngay BD:";
+            ngayBDLabel.Text = "Ngày Bắt Đầu:";
             // 
             // ngayKTLabel
             // 
             ngayKTLabel.AutoSize = true;
             ngayKTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngayKTLabel.Location = new System.Drawing.Point(259, 526);
+            ngayKTLabel.Location = new System.Drawing.Point(206, 524);
             ngayKTLabel.Name = "ngayKTLabel";
-            ngayKTLabel.Size = new System.Drawing.Size(96, 25);
+            ngayKTLabel.Size = new System.Drawing.Size(149, 25);
             ngayKTLabel.TabIndex = 7;
-            ngayKTLabel.Text = "Ngay KT:";
+            ngayKTLabel.Text = "Ngày Kết Thúc:";
             // 
             // DS
             // 

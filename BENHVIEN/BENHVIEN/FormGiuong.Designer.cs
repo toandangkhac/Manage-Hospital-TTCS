@@ -89,7 +89,7 @@
             maGiuongLabel.Name = "maGiuongLabel";
             maGiuongLabel.Size = new System.Drawing.Size(114, 25);
             maGiuongLabel.TabIndex = 5;
-            maGiuongLabel.Text = "Ma Giuong:";
+            maGiuongLabel.Text = "Mã Giường:";
             // 
             // soGiuongLabel
             // 
@@ -99,7 +99,7 @@
             soGiuongLabel.Name = "soGiuongLabel";
             soGiuongLabel.Size = new System.Drawing.Size(111, 25);
             soGiuongLabel.TabIndex = 7;
-            soGiuongLabel.Text = "So Giuong:";
+            soGiuongLabel.Text = "Số Giường:";
             // 
             // soPhongLabel
             // 
@@ -109,7 +109,7 @@
             soPhongLabel.Name = "soPhongLabel";
             soPhongLabel.Size = new System.Drawing.Size(105, 25);
             soPhongLabel.TabIndex = 9;
-            soPhongLabel.Text = "So Phong:";
+            soPhongLabel.Text = "Số Phòng:";
             // 
             // soKhuLabel
             // 
@@ -119,7 +119,7 @@
             soKhuLabel.Name = "soKhuLabel";
             soKhuLabel.Size = new System.Drawing.Size(84, 25);
             soKhuLabel.TabIndex = 11;
-            soKhuLabel.Text = "So Khu:";
+            soKhuLabel.Text = "Số Khu:";
             // 
             // barManager1
             // 

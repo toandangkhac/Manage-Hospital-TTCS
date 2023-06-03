@@ -83,7 +83,7 @@
             maVTLabel.Name = "maVTLabel";
             maVTLabel.Size = new System.Drawing.Size(78, 25);
             maVTLabel.TabIndex = 5;
-            maVTLabel.Text = "Ma VT:";
+            maVTLabel.Text = "Mã VT:";
             // 
             // moTaLabel
             // 
@@ -93,7 +93,7 @@
             moTaLabel.Name = "moTaLabel";
             moTaLabel.Size = new System.Drawing.Size(75, 25);
             moTaLabel.TabIndex = 7;
-            moTaLabel.Text = "Mo Ta:";
+            moTaLabel.Text = "Mô Tả:";
             // 
             // donGiaLabel
             // 
@@ -103,7 +103,7 @@
             donGiaLabel.Name = "donGiaLabel";
             donGiaLabel.Size = new System.Drawing.Size(89, 25);
             donGiaLabel.TabIndex = 9;
-            donGiaLabel.Text = "Don Gia:";
+            donGiaLabel.Text = "Đơn Giá:";
             // 
             // barManager1
             // 
@@ -280,10 +280,10 @@
             // 
             this.vATTUGridControl.DataSource = this.bdsVATTU;
             this.vATTUGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.vATTUGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vATTUGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.vATTUGridControl.Location = new System.Drawing.Point(0, 30);
             this.vATTUGridControl.MainView = this.gridView1;
-            this.vATTUGridControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vATTUGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.vATTUGridControl.MenuManager = this.barManager1;
             this.vATTUGridControl.Name = "vATTUGridControl";
             this.vATTUGridControl.Size = new System.Drawing.Size(1151, 289);
@@ -338,7 +338,7 @@
             this.txtMAVT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsVATTU, "MaVT", true));
             this.txtMAVT.Enabled = false;
             this.txtMAVT.Location = new System.Drawing.Point(246, 406);
-            this.txtMAVT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMAVT.Margin = new System.Windows.Forms.Padding(4);
             this.txtMAVT.MenuManager = this.barManager1;
             this.txtMAVT.Name = "txtMAVT";
             this.txtMAVT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,7 +350,7 @@
             // 
             this.txtMOTA.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsVATTU, "MoTa", true));
             this.txtMOTA.Location = new System.Drawing.Point(246, 475);
-            this.txtMOTA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMOTA.Margin = new System.Windows.Forms.Padding(4);
             this.txtMOTA.MenuManager = this.barManager1;
             this.txtMOTA.Name = "txtMOTA";
             this.txtMOTA.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -367,7 +367,7 @@
             0,
             0});
             this.txtDONGIA.Location = new System.Drawing.Point(246, 547);
-            this.txtDONGIA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDONGIA.Margin = new System.Windows.Forms.Padding(4);
             this.txtDONGIA.MenuManager = this.barManager1;
             this.txtDONGIA.Name = "txtDONGIA";
             this.txtDONGIA.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

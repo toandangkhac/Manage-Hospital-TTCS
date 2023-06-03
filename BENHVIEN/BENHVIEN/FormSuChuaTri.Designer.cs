@@ -73,18 +73,20 @@
             // maSuChuaTriLabel
             // 
             maSuChuaTriLabel.AutoSize = true;
+            maSuChuaTriLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             maSuChuaTriLabel.Location = new System.Drawing.Point(109, 450);
             maSuChuaTriLabel.Name = "maSuChuaTriLabel";
-            maSuChuaTriLabel.Size = new System.Drawing.Size(88, 16);
+            maSuChuaTriLabel.Size = new System.Drawing.Size(134, 25);
             maSuChuaTriLabel.TabIndex = 5;
             maSuChuaTriLabel.Text = "Mã sự chữa trị";
             // 
             // tenSuChuaTriLabel
             // 
             tenSuChuaTriLabel.AutoSize = true;
-            tenSuChuaTriLabel.Location = new System.Drawing.Point(357, 453);
+            tenSuChuaTriLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tenSuChuaTriLabel.Location = new System.Drawing.Point(100, 517);
             tenSuChuaTriLabel.Name = "tenSuChuaTriLabel";
-            tenSuChuaTriLabel.Size = new System.Drawing.Size(93, 16);
+            tenSuChuaTriLabel.Size = new System.Drawing.Size(141, 25);
             tenSuChuaTriLabel.TabIndex = 7;
             tenSuChuaTriLabel.Text = "Tên sự chữa trị";
             // 
@@ -307,19 +309,23 @@
             // 
             this.txtMaSCT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.SUCHUATRI_BDS, "MaSuChuaTri", true));
             this.txtMaSCT.Enabled = false;
-            this.txtMaSCT.Location = new System.Drawing.Point(212, 450);
+            this.txtMaSCT.Location = new System.Drawing.Point(330, 447);
             this.txtMaSCT.MenuManager = this.barManager1;
             this.txtMaSCT.Name = "txtMaSCT";
-            this.txtMaSCT.Size = new System.Drawing.Size(125, 22);
+            this.txtMaSCT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSCT.Properties.Appearance.Options.UseFont = true;
+            this.txtMaSCT.Size = new System.Drawing.Size(125, 30);
             this.txtMaSCT.TabIndex = 6;
             // 
             // txtTenSCT
             // 
             this.txtTenSCT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.SUCHUATRI_BDS, "TenSuChuaTri", true));
-            this.txtTenSCT.Location = new System.Drawing.Point(469, 450);
+            this.txtTenSCT.Location = new System.Drawing.Point(330, 511);
             this.txtTenSCT.MenuManager = this.barManager1;
             this.txtTenSCT.Name = "txtTenSCT";
-            this.txtTenSCT.Size = new System.Drawing.Size(125, 22);
+            this.txtTenSCT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSCT.Properties.Appearance.Options.UseFont = true;
+            this.txtTenSCT.Size = new System.Drawing.Size(125, 30);
             this.txtTenSCT.TabIndex = 8;
             // 
             // CT_BACSI_CHUATRI_BENHNHAN_BDS

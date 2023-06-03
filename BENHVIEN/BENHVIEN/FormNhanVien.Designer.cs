@@ -96,7 +96,7 @@
             maNVLabel.Name = "maNVLabel";
             maNVLabel.Size = new System.Drawing.Size(79, 25);
             maNVLabel.TabIndex = 5;
-            maNVLabel.Text = "Ma NV:";
+            maNVLabel.Text = "Mã NV:";
             maNVLabel.Click += new System.EventHandler(this.maNVLabel_Click);
             // 
             // hoLabel
@@ -107,7 +107,7 @@
             hoLabel.Name = "hoLabel";
             hoLabel.Size = new System.Drawing.Size(83, 25);
             hoLabel.TabIndex = 7;
-            hoLabel.Text = "Ho Ten:";
+            hoLabel.Text = "Họ Tên:";
             hoLabel.Click += new System.EventHandler(this.hoLabel_Click);
             // 
             // phaiLabel
@@ -118,7 +118,7 @@
             phaiLabel.Name = "phaiLabel";
             phaiLabel.Size = new System.Drawing.Size(57, 25);
             phaiLabel.TabIndex = 11;
-            phaiLabel.Text = "Phai:";
+            phaiLabel.Text = "Phái:";
             // 
             // sDTLabel
             // 
@@ -287,6 +287,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BACSITableAdapter = null;
             this.tableAdapterManager.BENHNHANTableAdapter = null;
             this.tableAdapterManager.CT_BACSI_CHUATRI_BENHNHANTableAdapter = null;
             this.tableAdapterManager.CT_BENHNHAN_GIUONGTableAdapter = null;
@@ -298,6 +299,7 @@
             this.tableAdapterManager.SUCHUATRITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BENHVIEN.HOSPITALDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VATTUTableAdapter = null;
+            this.tableAdapterManager.YTATableAdapter = null;
             // 
             // nHANVIENGridControl
             // 
