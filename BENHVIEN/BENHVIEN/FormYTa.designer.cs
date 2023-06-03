@@ -87,11 +87,11 @@
             // 
             maYTLabel.AutoSize = true;
             maYTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maYTLabel.Location = new System.Drawing.Point(48, 344);
+            maYTLabel.Location = new System.Drawing.Point(45, 344);
             maYTLabel.Name = "maYTLabel";
-            maYTLabel.Size = new System.Drawing.Size(83, 25);
+            maYTLabel.Size = new System.Drawing.Size(101, 25);
             maYTLabel.TabIndex = 9;
-            maYTLabel.Text = "Ma YT:";
+            maYTLabel.Text = "Mã Y Tá:";
             // 
             // congViecLabel
             // 
@@ -101,7 +101,7 @@
             congViecLabel.Name = "congViecLabel";
             congViecLabel.Size = new System.Drawing.Size(120, 25);
             congViecLabel.TabIndex = 10;
-            congViecLabel.Text = "Cong Viec:";
+            congViecLabel.Text = "Công Việc:";
             // 
             // barManager1
             // 

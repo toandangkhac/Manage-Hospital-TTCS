@@ -74,9 +74,6 @@
     <Compile Include="FormBenhNhanGiuong.Designer.cs">
       <DependentUpon>FormBenhNhanGiuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChonYTA.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormChon\FormChonBacSi.cs">
       <SubType>Form</SubType>
     </Compile>

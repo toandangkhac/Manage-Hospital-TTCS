@@ -89,7 +89,7 @@
             maGiuongLabel.Name = "maGiuongLabel";
             maGiuongLabel.Size = new System.Drawing.Size(114, 25);
             maGiuongLabel.TabIndex = 5;
-            maGiuongLabel.Text = "Ma Giuong:";
+            maGiuongLabel.Text = "Mã Giường:";
             // 
             // maBenhNhanLabel
             // 
@@ -99,7 +99,7 @@
             maBenhNhanLabel.Name = "maBenhNhanLabel";
             maBenhNhanLabel.Size = new System.Drawing.Size(149, 25);
             maBenhNhanLabel.TabIndex = 7;
-            maBenhNhanLabel.Text = "Ma Benh Nhan:";
+            maBenhNhanLabel.Text = "Mã Bệnh Nhân:";
             // 
             // ngayBDLabel
             // 

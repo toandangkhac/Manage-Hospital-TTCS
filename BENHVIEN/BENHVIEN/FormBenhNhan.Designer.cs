@@ -112,7 +112,7 @@
             hoLabel.Name = "hoLabel";
             hoLabel.Size = new System.Drawing.Size(83, 25);
             hoLabel.TabIndex = 3;
-            hoLabel.Text = "Ho Ten:";
+            hoLabel.Text = "Họ Tên:";
             // 
             // ngaySinhLabel
             // 
@@ -122,7 +122,7 @@
             ngaySinhLabel.Name = "ngaySinhLabel";
             ngaySinhLabel.Size = new System.Drawing.Size(109, 25);
             ngaySinhLabel.TabIndex = 7;
-            ngaySinhLabel.Text = "Ngay Sinh:";
+            ngaySinhLabel.Text = "Ngày Sinh:";
             // 
             // maLoaiLabel
             // 
@@ -132,7 +132,7 @@
             maLoaiLabel.Name = "maLoaiLabel";
             maLoaiLabel.Size = new System.Drawing.Size(55, 25);
             maLoaiLabel.TabIndex = 8;
-            maLoaiLabel.Text = "Loai:";
+            maLoaiLabel.Text = "Loại:";
             // 
             // maBacSiTheoDoiLabel
             // 
@@ -142,7 +142,7 @@
             maBacSiTheoDoiLabel.Name = "maBacSiTheoDoiLabel";
             maBacSiTheoDoiLabel.Size = new System.Drawing.Size(193, 25);
             maBacSiTheoDoiLabel.TabIndex = 10;
-            maBacSiTheoDoiLabel.Text = "Ma Bac Si Theo Doi:";
+            maBacSiTheoDoiLabel.Text = "Mã Bác Sĩ Theo Dõi:";
             // 
             // maBacSiTiepNhanLabel
             // 
@@ -152,7 +152,7 @@
             maBacSiTiepNhanLabel.Name = "maBacSiTiepNhanLabel";
             maBacSiTiepNhanLabel.Size = new System.Drawing.Size(204, 25);
             maBacSiTiepNhanLabel.TabIndex = 12;
-            maBacSiTiepNhanLabel.Text = "Ma Bac Si Tiep Nhan:";
+            maBacSiTiepNhanLabel.Text = "Mã Bác Sĩ Tiếp Nhận:";
             // 
             // maBenhNhanLabel1
             // 
@@ -162,7 +162,7 @@
             maBenhNhanLabel1.Name = "maBenhNhanLabel1";
             maBenhNhanLabel1.Size = new System.Drawing.Size(149, 25);
             maBenhNhanLabel1.TabIndex = 16;
-            maBenhNhanLabel1.Text = "Ma Benh Nhan:";
+            maBenhNhanLabel1.Text = "Mã Bệnh Nhân:";
             // 
             // panel1
             // 

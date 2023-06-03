@@ -97,7 +97,7 @@
             maBacSiLabel.Name = "maBacSiLabel";
             maBacSiLabel.Size = new System.Drawing.Size(108, 25);
             maBacSiLabel.TabIndex = 1;
-            maBacSiLabel.Text = "Ma Bac Si:";
+            maBacSiLabel.Text = "Mã Bác Sĩ:";
             // 
             // trinhDoLabel
             // 
@@ -107,7 +107,7 @@
             trinhDoLabel.Name = "trinhDoLabel";
             trinhDoLabel.Size = new System.Drawing.Size(93, 25);
             trinhDoLabel.TabIndex = 3;
-            trinhDoLabel.Text = "Trinh Do:";
+            trinhDoLabel.Text = "Trình Độ:";
             // 
             // bar2
             // 
