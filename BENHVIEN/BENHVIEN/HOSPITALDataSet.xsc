@@ -9,11 +9,9 @@
     <TableUISetting Name="GIUONGBENH">
       <ColumnUISettings>
         <ColumnUISetting Name="SoPhong">
-          <ControlSettings>
-            <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+          <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
               <BindableControlInfo Name="SpinEdit" Type="DevExpress.XtraEditors.SpinEdit" AssemblyName="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Frameworks=".NETFramework,Version=v4.5.2;.NETFramework,Version=v4.8;.NETFramework,Version=v4.7.2" />
-            </ControlSetting>
-          </ControlSettings>
+            </ControlSetting></ControlSettings>
         </ColumnUISetting>
       </ColumnUISettings>
     </TableUISetting>
