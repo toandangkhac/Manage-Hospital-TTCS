@@ -18,7 +18,7 @@ namespace BENHVIEN
          **********************************************/
         public static SqlConnection conn = new SqlConnection();//conn
         public static String connstr = "";//connstr
-        public static String connstrPublisher = "Data Source=MSI;Initial Catalog=HOSPITAL;Integrated Security=true;TrustServerCertificate=True";
+        public static String connstrPublisher = "Data Source=DESKTOP-4EAOBVB;Initial Catalog=HOSPITAL;Integrated Security=true;TrustServerCertificate=True";
         public static SqlDataReader myReader;//myReader
 
 
@@ -34,7 +34,7 @@ namespace BENHVIEN
          * loginName & loginPassword: tài khoản & mật khẩu dùng để 
          * đăng nhập vào server(phân mảnh)
          ***********************************************/
-        public static String serverName = "MSI";//servername
+        public static String serverName = "DESKTOP-4EAOBVB";//servername
        
         public static String userName = "";//username
 
@@ -77,6 +77,12 @@ namespace BENHVIEN
         public static String maBN = "";
         public static String maNV = "";
         public static String maKhu = "";
+        /*
+         biến dùng để tương tác với các form của bác sĩ
+         */
+        //-------------------------------
+        public static String maBNCanChua = "";
+        public static String maSCTApDung = "";
 
         /*
          * mở kết nối tới server 
