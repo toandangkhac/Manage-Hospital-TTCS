@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BENHVIEN.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,8 @@ namespace BENHVIEN
             if (Program.role == "YTATRUONG")
             {
                 pageYTT.Visible = true;
+                tkYTT.Visible = true;
+
             }
 
         }
@@ -55,6 +58,7 @@ namespace BENHVIEN
             if (Program.role == "YTATRUONG")
             {
                 pageYTT.Visible = false;
+                tkYTT.Visible = false;
             }
 
         }
@@ -273,6 +277,26 @@ namespace BENHVIEN
                 form.MdiParent = this;
                 form.Show();
             }
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormReportBenhNhan));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormReportBenhNhan form = new FormReportBenhNhan();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
