@@ -38,6 +38,7 @@ namespace BENHVIEN
             {
                 pageYTT.Visible = true;
                 tkYTT.Visible = true;
+                btnTAOTK.Enabled = true;
 
             }
 
@@ -59,6 +60,7 @@ namespace BENHVIEN
             {
                 pageYTT.Visible = false;
                 tkYTT.Visible = false;
+                btnTAOTK.Enabled = false;
             }
 
         }
@@ -297,6 +299,21 @@ namespace BENHVIEN
         private void FormMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTAOTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormTaoTaiKhoan));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormTaoTaiKhoan form = new FormTaoTaiKhoan();
+                form.MdiParent = this;
+                form.Show();
+            }
         }
     }
 }
