@@ -18,10 +18,10 @@ namespace BENHVIEN
          **********************************************/
         public static SqlConnection conn = new SqlConnection();//conn
         public static String connstr = "";//connstr
-        public static String connstrPublisher = "Data Source=MSI;Initial Catalog=HOSPITAL;Integrated Security=true;TrustServerCertificate=True";
+        public static String connstrPublisher = "Data Source=DESKTOP-4EAOBVB;Initial Catalog=HOSPITAL;Integrated Security=true;TrustServerCertificate=True";
         public static SqlDataReader myReader;//myReader
-
-
+        //DESKTOP-4EAOBVB
+        //MSI
 
         /**********************************************
          * servername: tên server(phân mảnh) sẽ kết nối tới
@@ -34,7 +34,7 @@ namespace BENHVIEN
          * loginName & loginPassword: tài khoản & mật khẩu dùng để 
          * đăng nhập vào server(phân mảnh)
          ***********************************************/
-        public static String serverName = "MSI";//servername
+        public static String serverName = "DESKTOP-4EAOBVB";//servername
        
         public static String userName = "";//username
 
