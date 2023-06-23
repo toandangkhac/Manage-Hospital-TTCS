@@ -327,3 +327,5 @@ C:\Users\Acer\Desktop\NguyenQuangNghiaVoLongTuADenZ\TTCS-HOSPITAL\BENHVIEN\BENHV
 C:\Users\Acer\Desktop\NguyenQuangNghiaVoLongTuADenZ\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
 C:\Users\Acer\Desktop\NguyenQuangNghiaVoLongTuADenZ\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\bin\Debug\DevExpress.XtraReports.v22.2.dll
 C:\Users\Acer\Desktop\NguyenQuangNghiaVoLongTuADenZ\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\bin\Debug\DevExpress.XtraReports.v22.2.Extensions.dll
+C:\Users\Acer\Desktop\NguyenQuangNghiaVoLongTuADenZ\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN.FormChuaTriChoBenhNhan.resources
+C:\Users\Acer\Desktop\NguyenQuangNghiaVoLongTuADenZ\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN.FormChon.FormChonVatTu.resources

@@ -47,6 +47,7 @@ namespace BENHVIEN
             string maBN = ((DataRowView)SP_ChonBenhNhanChuaTriBDS.Current)["MaBenhNhan"].ToString();
             Program.maBNCanChua = maBN;
             this.Dispose();
+            Program.formMain.showFormChuaTriBenhNhan();
         }
     }
 }
