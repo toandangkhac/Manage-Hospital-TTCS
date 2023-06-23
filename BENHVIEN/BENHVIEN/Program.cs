@@ -77,6 +77,7 @@ namespace BENHVIEN
         public static String maBN = "";
         public static String maNV = "";
         public static String maKhu = "";
+        public static String tenKhu = "";
         /*
          biến dùng để tương tác với các form của bác sĩ
          */
