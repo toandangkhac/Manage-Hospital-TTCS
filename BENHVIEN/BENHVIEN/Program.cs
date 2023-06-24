@@ -116,6 +116,7 @@ namespace BENHVIEN
         }
         public static String convertToSqlDate(String date)
         {//01-01-2902
+            if (date == "") return "";
             string[] result = date.Split(' ');
             string d = result[0];
             string[] temp = d.Split('/');

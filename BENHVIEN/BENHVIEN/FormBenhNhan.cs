@@ -218,25 +218,25 @@ namespace BENHVIEN
                             {
                                 query =
                string.Format("INSERT INTO DBO.BENHNHAN( Ho,Ten,NgaySinh,MaLoai)" +
-           "VALUES(N'{0}',N'{1}','{2}',{3})", ho, ten, ngaySinh, loai);
+           "VALUES(N'{0}',N'{1}','{2}',{3})", ho, ten, Program.convertToSqlDate(ngaySinh), loai);
                             }
                             else if (maBsTheoDoi == null)
                             {
                                 query =
                  string.Format("INSERT INTO DBO.BENHNHAN( Ho,Ten,NgaySinh,MaLoai,MaBacSiTiepNhan)" +
-             "VALUES(N'{0}',N'{1}','{2}',{3},'{4}')", ho, ten, ngaySinh, loai, maBsTiepNhan);
+             "VALUES(N'{0}',N'{1}','{2}',{3},'{4}')", ho, ten, Program.convertToSqlDate(ngaySinh), loai, maBsTiepNhan);
                             }
                             else if (maBsTiepNhan == null)
                             {
                                 query =
                  string.Format("INSERT INTO DBO.BENHNHAN( Ho,Ten,NgaySinh,MaLoai,MaBacSiTheoDoi)" +
-             "VALUES(N'{0}',N'{1}','{2}',{3},'{4}')", ho, ten, ngaySinh, loai, maBsTheoDoi);
+             "VALUES(N'{0}',N'{1}','{2}',{3},'{4}')", ho, ten, Program.convertToSqlDate(ngaySinh), loai, maBsTheoDoi);
                             }
                             else
                             {
                                 query =
            string.Format("INSERT INTO DBO.BENHNHAN( Ho,Ten,NgaySinh,MaLoai,MaBacSiTheoDoi,MaBacSiTiepNhan)" +
-       "VALUES(N'{0}',N'{1}','{2}',{3},'{4}', '{5}')", ho, ten, ngaySinh, loai, maBsTheoDoi, maBsTiepNhan);
+       "VALUES(N'{0}',N'{1}','{2}',{3},'{4}', '{5}')", ho, ten, Program.convertToSqlDate(ngaySinh), loai, maBsTheoDoi, maBsTiepNhan);
                             }
                            
                             int n = Program.ExecSqlNonQuery(query);
@@ -260,23 +260,23 @@ namespace BENHVIEN
                              maBsTheoDoi = string.IsNullOrEmpty(drv["MaBacSiTheoDoi"].ToString()) ? null : drv["MaBacSiTheoDoi"].ToString();
                             if (maBsTheoDoi == null && maBsTiepNhan == null)
                             {
-                                queryUndo =
+                                queryUndo = string.Format(
                                "UPDATE DBO.BENHNHAN " +
                                "SET " +
-                               "HO = '" + ho + "'," +
-                               "TEN = '" + ten + "'," +
-                               "NGAYSINH = '" + ngaySinh + "'," +
-                               "MaLoai = " + loai + 
-                               "WHERE MaBenhNhan = '" + maBN + "'";
+                               "HO = N'{0}'," +
+                               "TEN = N'{1}'," +
+                               "NGAYSINH = '{2}'," +
+                               "MaLoai = {3}" + 
+                               " WHERE MaBenhNhan = '" + maBN + "'", ho, ten, Program.convertToSqlDate(ngaySinh), loai);
                             }
                             else if (maBsTheoDoi == null)
                             {
                                 queryUndo =
                                "UPDATE DBO.BENHNHAN " +
                                "SET " +
-                               "HO = '" + ho + "'," +
-                               "TEN = '" + ten + "'," +
-                               "NGAYSINH = '" + ngaySinh + "'," +
+                               "HO = N'" + ho + "'," +
+                               "TEN = N'" + ten + "'," +
+                               "NGAYSINH = '" + Program.convertToSqlDate(ngaySinh) + "'," +
                                "MaLoai = " + loai + "," +
          
                                 "MaBacSiTiepNhan = '" + maBsTiepNhan + "'" +
@@ -287,9 +287,9 @@ namespace BENHVIEN
                                 queryUndo =
                                 "UPDATE DBO.BENHNHAN " +
                                 "SET " +
-                                "HO = '" + ho + "'," +
-                                "TEN = '" + ten + "'," +
-                                "NGAYSINH = '" + ngaySinh + "'," +
+                                "HO = N'" + ho + "'," +
+                                "TEN = N'" + ten + "'," +
+                                "NGAYSINH = '" + Program.convertToSqlDate(ngaySinh) + "'," +
                                 "MaLoai = " + loai + "," +
                                 "MaBacSiTheoDoi = '" + maBsTheoDoi + "'" +
                                 
@@ -302,7 +302,7 @@ namespace BENHVIEN
                                 "SET " +
                                 "HO = '" + ho + "'," +
                                 "TEN = '" + ten + "'," +
-                                "NGAYSINH = '" + ngaySinh + "'," +
+                                "NGAYSINH = '" + Program.convertToSqlDate(ngaySinh) + "'," +
                                 "MaLoai = " + loai + "," +
                                 "MaBacSiTheoDoi = '" + maBsTheoDoi + "'," +
                                  "MaBacSiTiepNhan = '" + maBsTiepNhan + "'" +
