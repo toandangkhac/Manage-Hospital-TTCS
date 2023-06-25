@@ -78,6 +78,8 @@ namespace BENHVIEN
         public static String maNV = "";
         public static String maKhu = "";
         public static String tenKhu = "";
+        public static String path = "";
+        public static int loi = 0;
         /*
          biến dùng để tương tác với các form của bác sĩ
          */
@@ -160,8 +162,15 @@ namespace BENHVIEN
             catch (SqlException ex)
             {
                 if (ex.Message.Contains("Error converting data type varchar to int"))
+                {
                     MessageBox.Show("Bạn format Cell lại cột qua kiểu Number hoặc mở File Excel.");
-                else MessageBox.Show(ex.Message);
+                    loi = 1;
+                }
+                else {
+                    MessageBox.Show(ex.Message);
+                         loi = 1;
+                }
+               
                 conn.Close();
                 return ex.State;
 

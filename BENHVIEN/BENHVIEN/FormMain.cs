@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -30,16 +31,21 @@ namespace BENHVIEN
             { 
             pageNV.Visible=true;
             }
-            if (Program.role == "BACSI")
+           else if (Program.role == "BACSI")
             {
                 pageBS.Visible = true;
             }
-            if (Program.role == "YTATRUONG")
+           else if (Program.role == "YTATRUONG")
             {
                 pageYTT.Visible = true;
                 tkYTT.Visible = true;
                 btnTAOTK.Enabled = true;
 
+            }
+            else
+            {
+                btnBACKUP.Enabled = true;
+                btnRESTORE.Enabled = true;
             }
 
         }
@@ -52,15 +58,19 @@ namespace BENHVIEN
             {
                 pageNV.Visible = false;
             }
-            if (Program.role == "BACSI")
+            else if (Program.role == "BACSI")
             {
                 pageBS.Visible = false;
             }
-            if (Program.role == "YTATRUONG")
+            else if (Program.role == "YTATRUONG")
             {
                 pageYTT.Visible = false;
                 tkYTT.Visible = false;
                 btnTAOTK.Enabled = false;
+            }
+            else {
+                btnBACKUP.Enabled = false;
+                btnRESTORE.Enabled = false;
             }
 
         }
@@ -312,6 +322,36 @@ namespace BENHVIEN
             {
                 FormTaoTaiKhoan form = new FormTaoTaiKhoan();
                 form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormBackup));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormBackup form = new FormBackup();
+
+                form.Show();
+            }
+        }
+
+        private void barButtonItem12_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormRestore));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormRestore form = new FormRestore();
+
                 form.Show();
             }
         }
