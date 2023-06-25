@@ -36,7 +36,7 @@ namespace BENHVIEN
             if (Program.KetNoi() == 0)
                 return;
 
-
+          
 
             String statement = "execute sp_DangNhap '" + Program.loginName + "'";
 
