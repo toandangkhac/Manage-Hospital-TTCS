@@ -46,6 +46,7 @@ namespace BENHVIEN
             {
                 btnBACKUP.Enabled = true;
                 btnRESTORE.Enabled = true;
+                btnHENGIO.Enabled = true;
             }
 
         }
@@ -71,6 +72,7 @@ namespace BENHVIEN
             else {
                 btnBACKUP.Enabled = false;
                 btnRESTORE.Enabled = false;
+                btnHENGIO.Enabled = false;
             }
 
         }
@@ -366,6 +368,21 @@ namespace BENHVIEN
             else
             {
                 FormRestore form = new FormRestore();
+
+                form.Show();
+            }
+        }
+
+        private void btnHENGIO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormHenGioBackup));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormHenGioBackup form = new FormHenGioBackup();
 
                 form.Show();
             }
