@@ -73,6 +73,8 @@
             this.MA = new System.Windows.Forms.ToolStripStatusLabel();
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.QUYEN = new System.Windows.Forms.ToolStripStatusLabel();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -102,10 +104,11 @@
             this.btnTAOTK,
             this.btnBACKUP,
             this.btnRESTORE,
-            this.btnHENGIO});
+            this.btnHENGIO,
+            this.barButtonItem13});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
-            this.ribbonControl1.MaxItemId = 20;
+            this.ribbonControl1.MaxItemId = 22;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 601;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -319,6 +322,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // pageBS
@@ -426,6 +430,20 @@
             this.QUYEN.Size = new System.Drawing.Size(54, 20);
             this.QUYEN.Text = "Quyền:";
             // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "In háo đơn";
+            this.barButtonItem12.Id = 20;
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick_2);
+            // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Caption = "In hóa đơn";
+            this.barButtonItem13.Id = 21;
+            this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -494,6 +512,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.BarButtonItem btnHENGIO;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
     }
 }
 
