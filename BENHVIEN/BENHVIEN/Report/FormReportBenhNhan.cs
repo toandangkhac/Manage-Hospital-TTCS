@@ -216,8 +216,8 @@ namespace BENHVIEN.Report
 
                     ReportBNNoiTruTheoThang report = new ReportBNNoiTruTheoThang(1, thangNoi, namThangNoi);
 
-                    report.thang.Text = thangNgoai.ToString();
-                    report.nam.Text = namThangNgoai.ToString();
+                    report.thang.Text = thangNoi.ToString();
+                    report.nam.Text = namThangNoi.ToString();
 
                     ReportPrintTool printTool = new ReportPrintTool(report);
                     printTool.ShowPreviewDialog();
@@ -227,7 +227,7 @@ namespace BENHVIEN.Report
                 else
                 {
                     ReportBNNoiTruTheoNam report = new ReportBNNoiTruTheoNam(1, namNoi);
-                    report.nam.Text = namNgoai.ToString();
+                    report.nam.Text = namNoi.ToString();
                     ReportPrintTool printTool = new ReportPrintTool(report);
                     printTool.ShowPreviewDialog();
                 }
@@ -244,8 +244,8 @@ namespace BENHVIEN.Report
 
                     ReportBNNoiTruTheoThangTheoKhu report = new ReportBNNoiTruTheoThangTheoKhu(thangNoi, namThangNoi,soKhu);
 
-                    report.thang.Text = thangNgoai.ToString();
-                    report.nam.Text = namThangNgoai.ToString();
+                    report.thang.Text = thangNoi.ToString();
+                    report.nam.Text = namThangNoi.ToString();
                     report.khu.Text = Program.tenKhu.ToString();
                     ReportPrintTool printTool = new ReportPrintTool(report);
                     printTool.ShowPreviewDialog();
