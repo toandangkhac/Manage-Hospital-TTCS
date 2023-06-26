@@ -43,7 +43,7 @@ namespace BENHVIEN
 
         private void btnCHONNV_Click(object sender, EventArgs e)
         {
-            Form f = new FormChonNhanVien();
+            Form f = new FormChonNhanVien_KCT();
             f.ShowDialog();
             txtMANV.Text = Program.maNV;
             Program.maNV = "";
@@ -122,12 +122,12 @@ namespace BENHVIEN
 
             /*Lay du lieu truoc khi chon btnGHI - phuc vu UNDO - sau khi OK thi da la du lieu moi*/
 
+
             DataRowView drv = ((DataRowView)bdsCTNV_KCT[bdsCTNV_KCT.Position]);
             String maNv = (drv["manv"].ToString());
             String soKhu = (drv["sokhu"].ToString());
             String ngayBD = (drv["ngayBD"].ToString());
             String ngayKT = (drv["ngayKT"].ToString());
-
 
 
             {
@@ -163,7 +163,7 @@ namespace BENHVIEN
                         /*trước khi ấn btnGHI là sửa thông tin nhân viên*/
                         else
                         {
-
+                            
 
                             queryUndo =
                                 "UPDATE DBO.CT_NV_KHUCHUATRI " +
