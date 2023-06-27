@@ -200,7 +200,7 @@ namespace BENHVIEN
                                 "DELETE DBO.BENHNHAN " +
                                 "WHERE MaBenhNhan = " + txtMABN.Text.Trim();
 */
-                            this.bdsBENHNHAN.RemoveCurrent();
+                            /*this.bdsBENHNHAN.RemoveCurrent();*/
                             string query;
 
                             if (maBsTheoDoi == null && maBsTiepNhan == null)

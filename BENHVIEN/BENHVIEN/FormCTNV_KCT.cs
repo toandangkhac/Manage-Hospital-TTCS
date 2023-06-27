@@ -186,7 +186,7 @@ namespace BENHVIEN
                     catch (Exception ex)
                     {
 
-                        bdsCTNV_KCT.RemoveCurrent();
+                       /* bdsCTNV_KCT.RemoveCurrent();*/
                         MessageBox.Show("Thất bại. Vui lòng kiểm tra lại!\n" + ex.Message, "Lỗi",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
