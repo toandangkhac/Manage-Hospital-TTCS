@@ -450,3 +450,4 @@ C:\Users\Acer\Desktop\pushLai\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN
 C:\Users\Acer\Desktop\pushLai\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN.FormHenGioBackup.resources
 C:\Users\Acer\Desktop\pushLai\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN.FormChon.FormChonBenhNhanInHoaDon.resources
 C:\Users\Acer\Desktop\pushLai\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN.Report.ReportSLVTDaSuDungChoViecChuaTri.resources
+C:\Users\Acer\Desktop\pushLai\TTCS-HOSPITAL\BENHVIEN\BENHVIEN\obj\Debug\BENHVIEN.FormXemBNTheoDoi.resources

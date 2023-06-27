@@ -190,5 +190,13 @@ namespace BENHVIEN
         {
             this.Dispose();
         }
+
+        private void FormTaoTaiKhoan_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hOSPITALDataSet.V_DS_TaiKhoan' table. You can move, or remove it, as needed.
+            this.v_DS_TaiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.v_DS_TaiKhoanTableAdapter.Fill(this.hOSPITALDataSet.V_DS_TaiKhoan);
+
+        }
     }
 }

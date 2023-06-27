@@ -407,5 +407,20 @@ namespace BENHVIEN
                 form.Show();
             }
         }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormXemBNTheoDoi));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormXemBNTheoDoi form = new FormXemBNTheoDoi();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
     }
 }
