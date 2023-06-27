@@ -198,7 +198,7 @@ namespace BENHVIEN
                         btnTHOAT.Enabled = true;
 
 
-                        this.bdsBENHNHAN.EndEdit();
+                        /*this.bdsBENHNHAN.EndEdit();*/
                       /*  this.bENHNHANTableAdapter.Update(this.DS.BENHNHAN);*/
 
 
@@ -211,7 +211,7 @@ namespace BENHVIEN
                                 "DELETE DBO.BENHNHAN " +
                                 "WHERE MaBenhNhan = " + txtMABN.Text.Trim();
 */
-                            this.bdsBENHNHAN.RemoveCurrent();
+                            /*this.bdsBENHNHAN.RemoveCurrent();*/
                             string query;
 
                             if (maBsTheoDoi == null && maBsTiepNhan == null)
@@ -300,8 +300,8 @@ namespace BENHVIEN
                                 queryUndo =
                                 "UPDATE DBO.BENHNHAN " +
                                 "SET " +
-                                "HO = '" + ho + "'," +
-                                "TEN = '" + ten + "'," +
+                                "HO = N'" + ho + "'," +
+                                "TEN = N'" + ten + "'," +
                                 "NGAYSINH = '" + Program.convertToSqlDate(ngaySinh) + "'," +
                                 "MaLoai = " + loai + "," +
                                 "MaBacSiTheoDoi = '" + maBsTheoDoi + "'," +

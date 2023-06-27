@@ -189,15 +189,28 @@ namespace BENHVIEN
                         else
                         {
 
-
-                            queryUndo =
+                            if (string.IsNullOrEmpty(ngayKT))
+                               {
+                                queryUndo =
                                 "UPDATE DBO.CT_BENHNHAN_GIUONG " +
                                 "SET " +
                                 "MABENHNHAN = '" + maBN + "'," +
                                 "MAGIUONG = '" + maG + "'," +
-                                "NGAYBD = '" + ngayBD + "' ," +
-                                "NGAYKT = '" + ngayKT + "'" +
+                                "NGAYBD = '" + ngayBD + "'" +
                                   "WHERE MABENHNHAN = '" + txtMABN.Text.Trim() + "' AND MAGIUONG = '" + txtMAGIUONG.Text.Trim() + "' AND ngayBD = '" + dteNGAYBD.Text + "'";
+                            }
+                            else {
+                                queryUndo =
+                                    "UPDATE DBO.CT_BENHNHAN_GIUONG " +
+                                    "SET " +
+                                    "MABENHNHAN = '" + maBN + "'," +
+                                    "MAGIUONG = '" + maG + "'," +
+                                    "NGAYBD = '" + ngayBD + "' ," +
+                                    "NGAYKT = '" + ngayKT + "'" +
+                                      "WHERE MABENHNHAN = '" + txtMABN.Text.Trim() + "' AND MAGIUONG = '" + txtMAGIUONG.Text.Trim() + "' AND ngayBD = '" + dteNGAYBD.Text + "'";
+                            }
+
+                            
                         }
 
 
@@ -211,7 +224,7 @@ namespace BENHVIEN
                     catch (Exception ex)
                     {
 
-                        bdsCT_GIUONG.RemoveCurrent();
+                       /* bdsCT_GIUONG.RemoveCurrent();*/
                         MessageBox.Show("Thất bại. Vui lòng kiểm tra lại!\n" + ex.Message, "Lỗi",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
