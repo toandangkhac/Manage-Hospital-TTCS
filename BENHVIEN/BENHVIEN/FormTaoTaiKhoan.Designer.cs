@@ -61,6 +61,8 @@
             this.hOSPITALDataSet = new BENHVIEN.HOSPITALDataSet();
             this.tableAdapterManager = new BENHVIEN.HOSPITALDataSetTableAdapters.TableAdapterManager();
             this.v_DS_TaiKhoanTableAdapter = new BENHVIEN.HOSPITALDataSetTableAdapters.V_DS_TaiKhoanTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtYTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYT.Properties)).BeginInit();
@@ -78,7 +80,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(394, 25);
+            this.label1.Location = new System.Drawing.Point(916, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(365, 51);
             this.label1.TabIndex = 0;
@@ -90,7 +92,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(214, 110);
+            this.label2.Location = new System.Drawing.Point(736, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 25);
             this.label2.TabIndex = 1;
@@ -100,8 +102,9 @@
             // 
             this.rdYTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdYTT.AutoSize = true;
+            this.rdYTT.Checked = true;
             this.rdYTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdYTT.Location = new System.Drawing.Point(377, 112);
+            this.rdYTT.Location = new System.Drawing.Point(899, 128);
             this.rdYTT.Name = "rdYTT";
             this.rdYTT.Size = new System.Drawing.Size(111, 24);
             this.rdYTT.TabIndex = 2;
@@ -114,11 +117,10 @@
             this.rdBS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdBS.AutoSize = true;
             this.rdBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBS.Location = new System.Drawing.Point(377, 158);
+            this.rdBS.Location = new System.Drawing.Point(899, 174);
             this.rdBS.Name = "rdBS";
             this.rdBS.Size = new System.Drawing.Size(80, 24);
             this.rdBS.TabIndex = 3;
-            this.rdBS.TabStop = true;
             this.rdBS.Text = "Bác Sĩ";
             this.rdBS.UseVisualStyleBackColor = true;
             // 
@@ -127,11 +129,10 @@
             this.rdYT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdYT.AutoSize = true;
             this.rdYT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdYT.Location = new System.Drawing.Point(377, 206);
+            this.rdYT.Location = new System.Drawing.Point(899, 222);
             this.rdYT.Name = "rdYT";
             this.rdYT.Size = new System.Drawing.Size(64, 24);
             this.rdYT.TabIndex = 4;
-            this.rdYT.TabStop = true;
             this.rdYT.Text = "Y tá ";
             this.rdYT.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +140,7 @@
             // 
             this.txtYTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtYTT.Enabled = false;
-            this.txtYTT.Location = new System.Drawing.Point(550, 114);
+            this.txtYTT.Location = new System.Drawing.Point(1072, 130);
             this.txtYTT.Name = "txtYTT";
             this.txtYTT.Size = new System.Drawing.Size(144, 22);
             this.txtYTT.TabIndex = 5;
@@ -148,7 +149,7 @@
             // 
             this.txtBS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBS.Enabled = false;
-            this.txtBS.Location = new System.Drawing.Point(550, 160);
+            this.txtBS.Location = new System.Drawing.Point(1072, 176);
             this.txtBS.Name = "txtBS";
             this.txtBS.Size = new System.Drawing.Size(144, 22);
             this.txtBS.TabIndex = 6;
@@ -157,7 +158,7 @@
             // 
             this.txtYT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtYT.Enabled = false;
-            this.txtYT.Location = new System.Drawing.Point(550, 208);
+            this.txtYT.Location = new System.Drawing.Point(1072, 224);
             this.txtYT.Name = "txtYT";
             this.txtYT.Size = new System.Drawing.Size(144, 22);
             this.txtYT.TabIndex = 7;
@@ -167,7 +168,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(748, 100);
+            this.button1.Location = new System.Drawing.Point(1270, 116);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 45);
             this.button1.TabIndex = 8;
@@ -180,7 +181,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(748, 151);
+            this.button2.Location = new System.Drawing.Point(1270, 167);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 40);
             this.button2.TabIndex = 9;
@@ -193,7 +194,7 @@
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(748, 199);
+            this.button3.Location = new System.Drawing.Point(1270, 215);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 40);
             this.button3.TabIndex = 10;
@@ -204,7 +205,7 @@
             // txtPASS2
             // 
             this.txtPASS2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPASS2.Location = new System.Drawing.Point(377, 394);
+            this.txtPASS2.Location = new System.Drawing.Point(899, 410);
             this.txtPASS2.Name = "txtPASS2";
             this.txtPASS2.PasswordChar = '*';
             this.txtPASS2.Size = new System.Drawing.Size(181, 22);
@@ -215,7 +216,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 394);
+            this.label5.Location = new System.Drawing.Point(649, 410);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(185, 21);
             this.label5.TabIndex = 15;
@@ -225,7 +226,7 @@
             // txtLOGIN
             // 
             this.txtLOGIN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLOGIN.Location = new System.Drawing.Point(377, 273);
+            this.txtLOGIN.Location = new System.Drawing.Point(899, 289);
             this.txtLOGIN.Name = "txtLOGIN";
             this.txtLOGIN.Size = new System.Drawing.Size(181, 22);
             this.txtLOGIN.TabIndex = 14;
@@ -235,7 +236,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(158, 276);
+            this.label4.Location = new System.Drawing.Point(680, 292);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 21);
             this.label4.TabIndex = 13;
@@ -245,7 +246,7 @@
             // txtPASS
             // 
             this.txtPASS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPASS.Location = new System.Drawing.Point(377, 336);
+            this.txtPASS.Location = new System.Drawing.Point(899, 352);
             this.txtPASS.Name = "txtPASS";
             this.txtPASS.PasswordChar = '*';
             this.txtPASS.Size = new System.Drawing.Size(181, 22);
@@ -256,7 +257,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(205, 336);
+            this.label3.Location = new System.Drawing.Point(727, 352);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 21);
             this.label3.TabIndex = 11;
@@ -291,6 +292,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.rdYTT);
             this.panel1.Controls.Add(this.rdBS);
@@ -309,9 +312,9 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 202);
+            this.panel1.Location = new System.Drawing.Point(0, 174);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 443);
+            this.panel1.Size = new System.Drawing.Size(2115, 603);
             this.panel1.TabIndex = 19;
             // 
             // panel2
@@ -320,7 +323,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1073, 100);
+            this.panel2.Size = new System.Drawing.Size(2115, 100);
             this.panel2.TabIndex = 20;
             // 
             // label6
@@ -329,7 +332,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(130, 24);
+            this.label6.Location = new System.Drawing.Point(651, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(819, 51);
             this.label6.TabIndex = 1;
@@ -341,7 +344,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1073, 102);
+            this.panel3.Size = new System.Drawing.Size(2115, 74);
             this.panel3.TabIndex = 21;
             // 
             // dataGridView1
@@ -361,7 +364,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1073, 102);
+            this.dataGridView1.Size = new System.Drawing.Size(2115, 74);
             this.dataGridView1.TabIndex = 0;
             // 
             // loginnameDataGridViewTextBoxColumn
@@ -428,11 +431,37 @@
             // 
             this.v_DS_TaiKhoanTableAdapter.ClearBeforeFill = true;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Lime;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(1270, 312);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(151, 49);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Tạo tài khoản";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(1270, 397);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(151, 49);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "Thoát";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FormTaoTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 645);
+            this.ClientSize = new System.Drawing.Size(2115, 777);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -491,5 +520,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
         private HOSPITALDataSetTableAdapters.V_DS_TaiKhoanTableAdapter v_DS_TaiKhoanTableAdapter;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
