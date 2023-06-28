@@ -387,5 +387,40 @@ namespace BENHVIEN
                 form.Show();
             }
         }
+
+        private void barButtonItem12_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormHoaDon));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormHoaDon form = new FormHoaDon();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(FormXemBNTheoDoi));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormXemBNTheoDoi form = new FormXemBNTheoDoi();
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
     }
 }

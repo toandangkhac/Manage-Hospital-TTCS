@@ -314,7 +314,7 @@ namespace BENHVIEN.Report
                     try
                     {
                         ReportBNNoiTruTheoNam report = new ReportBNNoiTruTheoNam(1, namNoi);
-                        report.nam.Text = namNgoai.ToString();
+                        report.nam.Text = namNoi.ToString();
                         if (File.Exists(@"D:\ReportBNNoiTruTheoNam.pdf"))
                         {
                             DialogResult dr = MessageBox.Show("File ReportBNNoiTruTheoNam.pdf tại ổ D đã có!\nBạn có muốn tạo lại?",
