@@ -112,13 +112,32 @@ namespace BENHVIEN
 
         private void button5_Click(object sender, EventArgs e)
         {
+           
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void FormTaoTaiKhoan_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hOSPITALDataSet.V_DS_TaiKhoan' table. You can move, or remove it, as needed.
+            this.v_DS_TaiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.v_DS_TaiKhoanTableAdapter.Fill(this.hOSPITALDataSet.V_DS_TaiKhoan);
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
             bool ketQua = kiemTraDuLieuDauVao();
             if (ketQua == false) return;
 
             string taiKhoan;
             string matKhau;
-            string maNhanVien="";
-            string vaiTro="";
+            string maNhanVien = "";
+            string vaiTro = "";
 
 
             if (rdYTT.Checked)
@@ -129,9 +148,9 @@ namespace BENHVIEN
                     return;
                 }
 
-                maNhanVien =txtYTT.Text.ToString();
+                maNhanVien = txtYTT.Text.ToString();
                 vaiTro = "YTATRUONG";
-            
+
             }
             if (rdBS.Checked)
             {
@@ -144,7 +163,7 @@ namespace BENHVIEN
                 maNhanVien = txtBS.Text.ToString();
                 vaiTro = "BACSI";
             }
-            if (rdYT.Checked) 
+            if (rdYT.Checked)
             {
                 if (txtYT.Text == "")
                 {
@@ -183,10 +202,9 @@ namespace BENHVIEN
                 Console.WriteLine(ex.Message);
                 return;
             }
-
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
