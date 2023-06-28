@@ -278,8 +278,8 @@ namespace BENHVIEN.Report
                     {
                         ReportBNNoiTruTheoThang report = new ReportBNNoiTruTheoThang(1, thangNoi, namThangNoi);
 
-                        report.thang.Text = thangNgoai.ToString();
-                        report.nam.Text = namThangNgoai.ToString();
+                        report.thang.Text = thangNoi.ToString();
+                        report.nam.Text = namThangNoi.ToString();
                         if (File.Exists(@"D:\ReportBNNoiTruTheoThang.pdf"))
                         {
                             DialogResult dr = MessageBox.Show("File ReportBNNoiTruTheoThang.pdf tại ổ D đã có!\nBạn có muốn tạo lại?",
@@ -314,7 +314,7 @@ namespace BENHVIEN.Report
                     try
                     {
                         ReportBNNoiTruTheoNam report = new ReportBNNoiTruTheoNam(1, namNoi);
-                        report.nam.Text = namNgoai.ToString();
+                        report.nam.Text = namNoi.ToString();
                         if (File.Exists(@"D:\ReportBNNoiTruTheoNam.pdf"))
                         {
                             DialogResult dr = MessageBox.Show("File ReportBNNoiTruTheoNam.pdf tại ổ D đã có!\nBạn có muốn tạo lại?",
@@ -358,8 +358,8 @@ namespace BENHVIEN.Report
                     {
                         ReportBNNoiTruTheoThangTheoKhu report = new ReportBNNoiTruTheoThangTheoKhu(thangNoi, namThangNoi, soKhu);
 
-                        report.thang.Text = thangNgoai.ToString();
-                        report.nam.Text = namThangNgoai.ToString();
+                        report.thang.Text = thangNoi.ToString();
+                        report.nam.Text = namThangNoi.ToString();
                         report.khu.Text = Program.tenKhu.ToString();
                         if (File.Exists(@"D:\ReportBNNoiTruTheoThangTheoKhu.pdf"))
                         {
