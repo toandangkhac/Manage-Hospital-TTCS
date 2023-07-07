@@ -190,7 +190,7 @@
             this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.StylePriority.UseForeColor = false;
             this.xrLabel12.Text = "xrLabel12";
-            this.xrLabel12.TextFormatString = "{0:d}";
+            this.xrLabel12.TextFormatString = "{0:dd/MM/yyyy}";
             // 
             // xrLabel11
             // 

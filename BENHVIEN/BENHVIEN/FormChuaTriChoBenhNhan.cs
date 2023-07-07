@@ -251,25 +251,25 @@ namespace BENHVIEN
                             {
                                 queryUndo = string.Format("UPDATE DBO.CT_BACSI_CHUATRI_BENHNHAN " +
                                 "SET MaSuChuaTri = '{0}', NgayChuaTri = '{1}', ThoiGianChuaTri = NULL, KetQua = N'{2}' WHERE MaCTBSCTBN = '{3}'",
-                                MaSCTCu, NgayChuaTriCu, KetQuaCu, MaCTBSCTBNCu);
+                                MaSCTCu, ngayChuaTriDateEdit.Text.ToString(), KetQuaCu, MaCTBSCTBNCu);
                             }
                             else
                             {
                                 queryUndo = string.Format("UPDATE DBO.CT_BACSI_CHUATRI_BENHNHAN " +
                                 "SET MaSuChuaTri = '{0}', NgayChuaTri = '{1}', ThoiGianChuaTri = {2}, KetQua = N'{3}' WHERE MaCTBSCTBN = '{4}'",
-                                MaSCTCu, NgayChuaTriCu, Program.formatSpinEdit(ThoiGianChuaTriCu), KetQuaCu, MaCTBSCTBNCu);
+                                MaSCTCu, ngayChuaTriDateEdit.Text.ToString(), Program.formatSpinEdit(ThoiGianChuaTriCu), KetQuaCu, MaCTBSCTBNCu);
                             }
                             if (thoiGianChuaTriSpinEdit.Text == "")
                             {
                                 query = string.Format("UPDATE DBO.CT_BACSI_CHUATRI_BENHNHAN " +
                                "SET MaSuChuaTri = '{0}', NgayChuaTri = '{1}', ThoiGianChuaTri = NULL, KetQua = N'{2}' WHERE MaCTBSCTBN = '{3}'",
-                               txtMaSCT.Text, NgayChuaTriCu, txtKQ.Text, maCTBSCTBNSpinEdit.Text);
+                               txtMaSCT.Text, ngayChuaTriDateEdit.Text.ToString(), txtKQ.Text, maCTBSCTBNSpinEdit.Text);
                             }
                             else
                             {
                                 query = string.Format("UPDATE DBO.CT_BACSI_CHUATRI_BENHNHAN " +
                                "SET MaSuChuaTri = '{0}', NgayChuaTri = '{1}', ThoiGianChuaTri = {2}, KetQua = N'{3}' WHERE MaCTBSCTBN = '{4}'",
-                               txtMaSCT.Text, NgayChuaTriCu, Program.formatSpinEdit(thoiGianChuaTriSpinEdit.Text), txtKQ.Text, maCTBSCTBNSpinEdit.Text);
+                               txtMaSCT.Text, ngayChuaTriDateEdit.Text.ToString(), Program.formatSpinEdit(thoiGianChuaTriSpinEdit.Text), txtKQ.Text, maCTBSCTBNSpinEdit.Text);
                             }
 
                             int n = Program.ExecSqlNonQuery(query);
@@ -284,6 +284,7 @@ namespace BENHVIEN
                         /*cập nhật lại trạng thái thêm mới cho chắc*/
                         dangThemMoi = false;
                         MessageBox.Show("Ghi thành công", "Thông báo", MessageBoxButtons.OK);
+                        btnUNDO.Enabled = true;
                     }
                     catch (Exception ex)
                     {
