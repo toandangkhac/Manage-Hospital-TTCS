@@ -86,7 +86,7 @@
             // 
             maNVLabel.AutoSize = true;
             maNVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maNVLabel.Location = new System.Drawing.Point(271, 329);
+            maNVLabel.Location = new System.Drawing.Point(281, 451);
             maNVLabel.Name = "maNVLabel";
             maNVLabel.Size = new System.Drawing.Size(79, 25);
             maNVLabel.TabIndex = 1;
@@ -96,7 +96,7 @@
             // 
             soKhuLabel.AutoSize = true;
             soKhuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            soKhuLabel.Location = new System.Drawing.Point(266, 392);
+            soKhuLabel.Location = new System.Drawing.Point(276, 514);
             soKhuLabel.Name = "soKhuLabel";
             soKhuLabel.Size = new System.Drawing.Size(84, 25);
             soKhuLabel.TabIndex = 3;
@@ -106,7 +106,7 @@
             // 
             ngayBDLabel.AutoSize = true;
             ngayBDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngayBDLabel.Location = new System.Drawing.Point(216, 458);
+            ngayBDLabel.Location = new System.Drawing.Point(226, 580);
             ngayBDLabel.Name = "ngayBDLabel";
             ngayBDLabel.Size = new System.Drawing.Size(139, 25);
             ngayBDLabel.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             ngayKTLabel.AutoSize = true;
             ngayKTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngayKTLabel.Location = new System.Drawing.Point(206, 524);
+            ngayKTLabel.Location = new System.Drawing.Point(216, 646);
             ngayKTLabel.Name = "ngayKTLabel";
             ngayKTLabel.Size = new System.Drawing.Size(149, 25);
             ngayKTLabel.TabIndex = 7;
@@ -160,7 +160,7 @@
             this.cT_NV_KHUCHUATRIGridControl.Location = new System.Drawing.Point(0, 30);
             this.cT_NV_KHUCHUATRIGridControl.MainView = this.gridView1;
             this.cT_NV_KHUCHUATRIGridControl.Name = "cT_NV_KHUCHUATRIGridControl";
-            this.cT_NV_KHUCHUATRIGridControl.Size = new System.Drawing.Size(1033, 189);
+            this.cT_NV_KHUCHUATRIGridControl.Size = new System.Drawing.Size(1033, 371);
             this.cT_NV_KHUCHUATRIGridControl.TabIndex = 1;
             this.cT_NV_KHUCHUATRIGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -216,7 +216,7 @@
             // 
             this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTNV_KCT, "MaNV", true));
             this.txtMANV.Enabled = false;
-            this.txtMANV.Location = new System.Drawing.Point(417, 324);
+            this.txtMANV.Location = new System.Drawing.Point(427, 446);
             this.txtMANV.Name = "txtMANV";
             this.txtMANV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMANV.Properties.Appearance.Options.UseFont = true;
@@ -227,7 +227,7 @@
             // 
             this.txtSOKHU.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTNV_KCT, "SoKhu", true));
             this.txtSOKHU.Enabled = false;
-            this.txtSOKHU.Location = new System.Drawing.Point(417, 389);
+            this.txtSOKHU.Location = new System.Drawing.Point(427, 511);
             this.txtSOKHU.Name = "txtSOKHU";
             this.txtSOKHU.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSOKHU.Properties.Appearance.Options.UseFont = true;
@@ -238,7 +238,7 @@
             // 
             this.dteNGAYBD.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTNV_KCT, "NgayBD", true));
             this.dteNGAYBD.EditValue = null;
-            this.dteNGAYBD.Location = new System.Drawing.Point(417, 455);
+            this.dteNGAYBD.Location = new System.Drawing.Point(427, 577);
             this.dteNGAYBD.Name = "dteNGAYBD";
             this.dteNGAYBD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dteNGAYBD.Properties.Appearance.Options.UseFont = true;
@@ -253,7 +253,7 @@
             // 
             this.dteNGAYKT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTNV_KCT, "NgayKT", true));
             this.dteNGAYKT.EditValue = null;
-            this.dteNGAYKT.Location = new System.Drawing.Point(417, 521);
+            this.dteNGAYKT.Location = new System.Drawing.Point(427, 643);
             this.dteNGAYKT.Name = "dteNGAYKT";
             this.dteNGAYKT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dteNGAYKT.Properties.Appearance.Options.UseFont = true;
@@ -267,7 +267,7 @@
             // btnCHONNV
             // 
             this.btnCHONNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHONNV.Location = new System.Drawing.Point(656, 318);
+            this.btnCHONNV.Location = new System.Drawing.Point(666, 440);
             this.btnCHONNV.Name = "btnCHONNV";
             this.btnCHONNV.Size = new System.Drawing.Size(238, 36);
             this.btnCHONNV.TabIndex = 9;
@@ -278,7 +278,7 @@
             // btnCHONKHU
             // 
             this.btnCHONKHU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHONKHU.Location = new System.Drawing.Point(656, 383);
+            this.btnCHONKHU.Location = new System.Drawing.Point(666, 505);
             this.btnCHONKHU.Name = "btnCHONKHU";
             this.btnCHONKHU.Size = new System.Drawing.Size(238, 36);
             this.btnCHONKHU.TabIndex = 10;

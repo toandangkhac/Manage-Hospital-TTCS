@@ -108,7 +108,7 @@
             // 
             hoLabel.AutoSize = true;
             hoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hoLabel.Location = new System.Drawing.Point(663, 241);
+            hoLabel.Location = new System.Drawing.Point(666, 311);
             hoLabel.Name = "hoLabel";
             hoLabel.Size = new System.Drawing.Size(83, 25);
             hoLabel.TabIndex = 3;
@@ -118,7 +118,7 @@
             // 
             ngaySinhLabel.AutoSize = true;
             ngaySinhLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ngaySinhLabel.Location = new System.Drawing.Point(637, 283);
+            ngaySinhLabel.Location = new System.Drawing.Point(640, 353);
             ngaySinhLabel.Name = "ngaySinhLabel";
             ngaySinhLabel.Size = new System.Drawing.Size(109, 25);
             ngaySinhLabel.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             maLoaiLabel.AutoSize = true;
             maLoaiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maLoaiLabel.Location = new System.Drawing.Point(29, 313);
+            maLoaiLabel.Location = new System.Drawing.Point(32, 383);
             maLoaiLabel.Name = "maLoaiLabel";
             maLoaiLabel.Size = new System.Drawing.Size(55, 25);
             maLoaiLabel.TabIndex = 8;
@@ -138,7 +138,7 @@
             // 
             maBacSiTheoDoiLabel.AutoSize = true;
             maBacSiTheoDoiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maBacSiTheoDoiLabel.Location = new System.Drawing.Point(554, 336);
+            maBacSiTheoDoiLabel.Location = new System.Drawing.Point(557, 406);
             maBacSiTheoDoiLabel.Name = "maBacSiTheoDoiLabel";
             maBacSiTheoDoiLabel.Size = new System.Drawing.Size(193, 25);
             maBacSiTheoDoiLabel.TabIndex = 10;
@@ -148,7 +148,7 @@
             // 
             maBacSiTiepNhanLabel.AutoSize = true;
             maBacSiTiepNhanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maBacSiTiepNhanLabel.Location = new System.Drawing.Point(542, 386);
+            maBacSiTiepNhanLabel.Location = new System.Drawing.Point(545, 456);
             maBacSiTiepNhanLabel.Name = "maBacSiTiepNhanLabel";
             maBacSiTiepNhanLabel.Size = new System.Drawing.Size(204, 25);
             maBacSiTiepNhanLabel.TabIndex = 12;
@@ -158,7 +158,7 @@
             // 
             maBenhNhanLabel1.AutoSize = true;
             maBenhNhanLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            maBenhNhanLabel1.Location = new System.Drawing.Point(21, 239);
+            maBenhNhanLabel1.Location = new System.Drawing.Point(24, 309);
             maBenhNhanLabel1.Name = "maBenhNhanLabel1";
             maBenhNhanLabel1.Size = new System.Drawing.Size(149, 25);
             maBenhNhanLabel1.TabIndex = 16;
@@ -204,13 +204,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 158);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1501, 461);
+            this.panel2.Size = new System.Drawing.Size(1501, 515);
             this.panel2.TabIndex = 4;
             // 
             // cbLOAI
             // 
             this.cbLOAI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "MaLoai", true));
-            this.cbLOAI.Location = new System.Drawing.Point(108, 313);
+            this.cbLOAI.Location = new System.Drawing.Point(111, 383);
             this.cbLOAI.MenuManager = this.barManager1;
             this.cbLOAI.Name = "cbLOAI";
             this.cbLOAI.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,7 +334,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 619);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 673);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1501, 0);
             // 
@@ -344,7 +344,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 589);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 643);
             // 
             // barDockControlRight
             // 
@@ -352,7 +352,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1501, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 589);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 643);
             // 
             // barButtonItem2
             // 
@@ -374,7 +374,7 @@
             // 
             this.txtMABSTIEPNHAN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "MaBacSiTiepNhan", true));
             this.txtMABSTIEPNHAN.Enabled = false;
-            this.txtMABSTIEPNHAN.Location = new System.Drawing.Point(801, 383);
+            this.txtMABSTIEPNHAN.Location = new System.Drawing.Point(804, 453);
             this.txtMABSTIEPNHAN.MenuManager = this.barManager1;
             this.txtMABSTIEPNHAN.Name = "txtMABSTIEPNHAN";
             this.txtMABSTIEPNHAN.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -386,7 +386,7 @@
             // 
             this.txtMABSTHEODOI.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "MaBacSiTheoDoi", true));
             this.txtMABSTHEODOI.Enabled = false;
-            this.txtMABSTHEODOI.Location = new System.Drawing.Point(801, 333);
+            this.txtMABSTHEODOI.Location = new System.Drawing.Point(804, 403);
             this.txtMABSTHEODOI.MenuManager = this.barManager1;
             this.txtMABSTHEODOI.Name = "txtMABSTHEODOI";
             this.txtMABSTHEODOI.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -398,7 +398,7 @@
             // 
             this.dteNGAYSINH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "NgaySinh", true));
             this.dteNGAYSINH.EditValue = null;
-            this.dteNGAYSINH.Location = new System.Drawing.Point(801, 278);
+            this.dteNGAYSINH.Location = new System.Drawing.Point(804, 348);
             this.dteNGAYSINH.MenuManager = this.barManager1;
             this.dteNGAYSINH.Name = "dteNGAYSINH";
             this.dteNGAYSINH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,7 +413,7 @@
             // txtTEN
             // 
             this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "Ten", true));
-            this.txtTEN.Location = new System.Drawing.Point(932, 235);
+            this.txtTEN.Location = new System.Drawing.Point(935, 305);
             this.txtTEN.MenuManager = this.barManager1;
             this.txtTEN.Name = "txtTEN";
             this.txtTEN.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,7 +424,7 @@
             // txtHO
             // 
             this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "Ho", true));
-            this.txtHO.Location = new System.Drawing.Point(801, 235);
+            this.txtHO.Location = new System.Drawing.Point(804, 305);
             this.txtHO.MenuManager = this.barManager1;
             this.txtHO.Name = "txtHO";
             this.txtHO.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -435,7 +435,7 @@
             // txtMABN
             // 
             this.txtMABN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsBENHNHAN, "MaBenhNhan", true));
-            this.txtMABN.Location = new System.Drawing.Point(229, 236);
+            this.txtMABN.Location = new System.Drawing.Point(232, 306);
             this.txtMABN.MenuManager = this.barManager1;
             this.txtMABN.Name = "txtMABN";
             this.txtMABN.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -451,7 +451,7 @@
             this.bENHNHANGridControl.MainView = this.gridView1;
             this.bENHNHANGridControl.MenuManager = this.barManager1;
             this.bENHNHANGridControl.Name = "bENHNHANGridControl";
-            this.bENHNHANGridControl.Size = new System.Drawing.Size(1501, 220);
+            this.bENHNHANGridControl.Size = new System.Drawing.Size(1501, 287);
             this.bENHNHANGridControl.TabIndex = 15;
             this.bENHNHANGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -537,7 +537,7 @@
             // 
             this.btnCHONBSTIEPNHAN.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCHONBSTIEPNHAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHONBSTIEPNHAN.Location = new System.Drawing.Point(981, 378);
+            this.btnCHONBSTIEPNHAN.Location = new System.Drawing.Point(984, 448);
             this.btnCHONBSTIEPNHAN.Name = "btnCHONBSTIEPNHAN";
             this.btnCHONBSTIEPNHAN.Size = new System.Drawing.Size(284, 44);
             this.btnCHONBSTIEPNHAN.TabIndex = 15;
@@ -549,7 +549,7 @@
             // 
             this.btnCHONBSTHEODOI.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCHONBSTHEODOI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHONBSTHEODOI.Location = new System.Drawing.Point(981, 328);
+            this.btnCHONBSTHEODOI.Location = new System.Drawing.Point(984, 398);
             this.btnCHONBSTHEODOI.Name = "btnCHONBSTHEODOI";
             this.btnCHONBSTHEODOI.Size = new System.Drawing.Size(284, 43);
             this.btnCHONBSTHEODOI.TabIndex = 14;
@@ -600,7 +600,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1501, 619);
+            this.ClientSize = new System.Drawing.Size(1501, 673);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
