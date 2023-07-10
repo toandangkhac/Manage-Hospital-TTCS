@@ -1,4 +1,6 @@
 # TTCS-HOSPITAL ㅤㅤㅤㅤㅤㅤㅤㅤ
- 
+
+ NGUYỄN TRẦN TRỌNG TÍN - N20DCCN065
+ ĐẶNG KHẮC TOẢN - N20DCCN067
 
   
